@@ -10,7 +10,7 @@ title: Spokes and Spikes 2017
     	<h1 class="header center blue-text">Spokes and Spikes 2017</h1>
 	    <div class="row">
             <div class="content">
-                
+                <div id="scatterplot-ss2017-40plus"></div>
             </div>
         </div>
 
@@ -26,12 +26,24 @@ title: Spokes and Spikes 2017
 
 </div>
 
-<pre id="csv-ss2017-female" style="display: none">
-	
-</pre>
+<pre id="csv-ss2017-40plus" style="display: none">Name,Age,Time
+Kalin Rusev,44,365025.83
+Nikolaj Kostadinov,42,370483.5
+Lyudmil Lozov,42,390437.92
+Jeko Stojchev,,390554.13
+Boris Kasherov,44,436861.21
+Georgi Georgiev,40,442235.67
+Andrej Rublyov,39,465889.04
+Teodor Milkov,40,473804.79
+Nikolaj Djankov,49,492552.58
+Gero Saturov,40,501103.92
+Nigel Morgan,61,523462.5
+Georgi Kozhuharov,41,562595.83
+Konstantin Ivanov,44,595496.25
+Cvetan Banev,40,778547.92</pre>
 
 <script>
-Highcharts.chart('scatterplot-ss2017-female', {
+Highcharts.chart('scatterplot-ss2017-40plus', {
     credits: {
         enabled: false
     },
@@ -41,7 +53,7 @@ Highcharts.chart('scatterplot-ss2017-female', {
         zoomType: 'xy'
     },
     title: {
-        text: 'Female Runners in Spokes and Spikes 2017'
+        text: '40+ Male Runners in Spokes and Spikes 2017'
     },
     xAxis: {
         title: {
@@ -96,7 +108,7 @@ Highcharts.chart('scatterplot-ss2017-female', {
 
     data: {
     	FirstRowAsNames:false,
-    	csv: document.getElementById('csv-ss2017-female').innerHTML,
+    	csv: document.getElementById('csv-ss2017-40plus').innerHTML,
     	seriesMapping: [{
     		name: 0,
     		x: 1,
@@ -105,3 +117,4 @@ Highcharts.chart('scatterplot-ss2017-female', {
     },
 });
 </script>
+
