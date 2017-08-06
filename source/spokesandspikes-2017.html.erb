@@ -1,0 +1,107 @@
+---
+title: Spokes and Spikes 2017
+---
+
+<div class="container">
+
+
+
+<section>
+    	<h1 class="header center blue-text">Spokes and Spikes 2017</h1>
+	    <div class="row">
+            <div class="content">
+                
+            </div>
+        </div>
+
+    </section>
+
+    <hr>
+        <ul>
+            <li>1. Data taken from <a href="https://drace.bg/event/86/results">Drace.</a></li>
+            <li>2. Data normalized with R.</li>
+            <li>3. Charts created with <a href="https://www.highcharts.com">Highcharts.</a></li>
+        </ul>
+        <br>
+
+</div>
+
+<pre id="csv-ss2017-female" style="display: none">
+	
+</pre>
+
+<script>
+Highcharts.chart('scatterplot-ss2017-female', {
+    credits: {
+        enabled: false
+    },
+
+    chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Female Runners in Spokes and Spikes 2017'
+    },
+    xAxis: {
+        title: {
+            enabled: true,
+            text: 'Age'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'Time'
+        },
+        type: 'datetime',
+        // dateTimeLabelFormats: {
+        //     second: "%H:%M:%S",
+        //     minute: "%H:%M:%S",
+        //     hour: "%H:%M:%S"
+        // },
+        reversed: true
+    },
+
+    legend:false,
+
+    plotOptions: {
+        scatter: {
+            marker: {
+                fillColor: 'orange',
+                fillOpacity: 0.3,
+                radius: 6,
+                states: {
+                    hover: {
+                        enabled: true,
+                        lineColor: 'rgb(100,100,100,)'
+                    }
+                }
+            },
+            states: {
+                hover: {
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<b>{point.key}</b><br>',
+                pointFormat: '{point.x} years old, <br> {point.y:%H:%M:%S}'
+            }
+        }
+    },
+
+    data: {
+    	FirstRowAsNames:false,
+    	csv: document.getElementById('csv-ss2017-female').innerHTML,
+    	seriesMapping: [{
+    		name: 0,
+    		x: 1,
+    		y: 2
+    	}]
+    },
+});
+</script>

@@ -1,0 +1,425 @@
+---
+title: Pirin Skyrun 2017
+---
+
+<div class="container">
+
+   <section>
+	   	<div class="race-title">
+			<h1 class="header center blue-text">Pirin Skyrun 2017</h1>
+		</div>
+
+	    <div class="row">
+            <div class="content">
+                <div id="scatterplot-psr2017-female"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="row">
+            <div class="content">
+                <div id="scatterplot-psr2017-male"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="row">
+            <div class="content">
+                <div id="scatterplot-psr2017-male40"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="row">
+            <div class="content">
+                <div id="psr2017-gender"></div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+        <ul>
+            <li>1. Data taken from <a href="https://drace.bg/event/79/results">Drace.</a></li>
+            <li>2. Data normalized with R.</li>
+            <li>3. Charts created with <a href="https://www.highcharts.com">Highcharts.</a></li>
+        </ul>
+        <br>
+</div>
+
+
+
+<pre id="csv-female-psr2017" style="display: none">Name,Age,Time
+Teodora Pashina,23,11570000
+Elisaveta Gilina,26,11768000
+Radka Tsokova,30,12310000
+Mariana Peneva,41,12759000
+Kamelija Kamenova,32,13069000
+Gergana Borisova,41,14251000
+Milena Dimitrova,34,14418000
+Cvetelina Beneva,40,14434000
+Ralitza Tihova,33,15569000
+Pavlina Genova,33,17124000
+Ralica Lazarova,29,17942000
+Janka Cvetkova,50,18080000
+Denica Velikova,29,18327000
+Lora Georgieva,26,19162000
+Nikolina Andonova,21,19433000
+Tanya  Gancheva,28,19803000</pre>
+
+<script>
+Highcharts.chart('scatterplot-psr2017-female', {
+    credits: {
+        enabled: false
+    },
+
+    chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Female Runners in the 2017 Pirin Skyrun'
+    },
+    xAxis: {
+        title: {
+            enabled: true,
+            text: 'Age'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'Time'
+        },
+        type: 'datetime',
+        // dateTimeLabelFormats: {
+        //     second: "%H:%M:%S",
+        //     minute: "%H:%M:%S",
+        //     hour: "%H:%M:%S"
+        // },
+        reversed: true
+    },
+
+    legend:false,
+
+    plotOptions: {
+        scatter: {
+            marker: {
+                fillColor: 'orange',
+                fillOpacity: 0.3,
+                radius: 6,
+                states: {
+                    hover: {
+                        enabled: true,
+                        lineColor: 'rgb(100,100,100,)'
+                    }
+                }
+            },
+            states: {
+                hover: {
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<b>{point.key}</b><br>',
+                pointFormat: '{point.x} years old, <br> {point.y:%H:%M:%S}'
+            }
+        }
+    },
+
+    data: {
+        FirstRowAsNames:false,
+        csv: document.getElementById('csv-female-psr2017').innerHTML,
+        seriesMapping: [{
+            name: 0,
+            x: 1,
+            y: 2
+        }]
+    },
+});
+</script>
+
+<pre id="csv-male-psr2017" style="display: none">Name,Age,Time
+Emil Stoynev,24,6954999.99999998
+Mihail Mihajlov,20,7566000.00000001
+Dimitar Mihaylov,38,7760999.99999999
+minko banchev,31,7894000.00000001
+Dimiter Karabahchiev,39,8102000.00000002
+Peter Matov,26,8427999.99999999
+Ivelin Penchev,26,8614000.00000001
+Momchil Kinov,32,8795999.99999999
+Konstantin Bujukliev,38,9046000.00000001
+Kalin Vezhdarov,35,9164999.99999999
+Nikolay Kasakov,29,9337000
+Dobromir Dobrev,30,9496000.00000001
+Dimiter Velev,35,9508000
+Anton Georgiev,22,9609999.99999998
+Borislav Kamilov,32,9622000.00000001
+Nikolaj Najdenov,27,9721000.00000001
+Ivanko Ivanov,19,9987999.99999998
+Ivan Aleksandrov,29,10209000
+Nikolay Kitanov,36,10529000
+Borislav Nikolov,23,10657000
+Dimitar Dimitrov,29,10724000
+Vladimir Božinov,33,10800000
+Vasil Katsarov,36,10895000
+Antony Stoyanov,29,11015000
+Ilyan Todorov,36,11246000
+Milen Tanev,30,11489000
+Victor Hristov,30,11518000
+Javor Lazarov,32,11684000
+Vasil Bankovski,27,11802000
+Kolyo Peev,27,11901000
+Todor Brailski,30,11937000
+Hristo Radionov,33,12086000
+Mariyan Genov,34,12190000
+Samuil Velinov,26,12425000
+Georgi Abadžiev,30,12454000
+Pavel Tsokov,30,12481000
+Venzi Kalbanov,27,12700000
+Jordan Dinkov,30,12762000
+Marin Naydenov,36,12763000
+Stoyan Peev,28,12885000
+Petko Radionov,36,12973000
+Angel Grozev,31,13065000
+Ventsislav Gashev,38,13508000
+Venelin Sjarov,38,13619000
+Svetoslav Stoyanov,36,13622000
+Ivajlo Dočkov,33,14181000
+Svetlin Genčev,34,14497000
+Janko Stefanov,29,15163000
+Ivan Mustakichev,34,15299000
+Yuliyan Ignatov,27,15577000
+Lyubomir Krastev,28,15594000
+Damyan Yordanov,31,15594000
+Aleksander Kasabov,34,16681000
+Nikola Traykov,30,16757000
+Naj Den,30,16939000
+Aram Hazikian,38,17280000
+Mario Aleksiev,29,18325000</pre>
+
+<script>
+Highcharts.chart('scatterplot-psr2017-male', {
+    credits: {
+        enabled: false
+    },
+
+    chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Male Runners in the 2017 Pirin Skyrun'
+    },
+    xAxis: {
+        title: {
+            enabled: true,
+            text: 'Age'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'Time'
+        },
+        type: 'datetime',
+        // dateTimeLabelFormats: {
+        //     second: "%H:%M:%S",
+        //     minute: "%H:%M:%S",
+        //     hour: "%H:%M:%S"
+        // },
+        reversed: true
+    },
+
+    legend:false,
+
+    plotOptions: {
+        scatter: {
+            marker: {
+                fillColor: 'lightblue',
+                fillOpacity: 0.3,
+                radius: 6,
+                states: {
+                    hover: {
+                        enabled: true,
+                        lineColor: 'rgb(100,100,100,)'
+                    }
+                }
+            },
+            states: {
+                hover: {
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<b>{point.key}</b><br>',
+                pointFormat: '{point.x} years old, <br> {point.y:%H:%M:%S}'
+            }
+        }
+    },
+
+    data: {
+        FirstRowAsNames:false,
+        csv: document.getElementById('csv-male-psr2017').innerHTML,
+        seriesMapping: [{
+            name: 0,
+            x: 1,
+            y: 2
+        }]
+    },
+});
+</script>
+
+<pre id="csv-male40-psr2017" style="display: none">Name,Age,Time
+Nikolaj Djankov,48,8282000.00000001
+Bo Dudek,40,8465000
+Svetoslav Nejkov,43,9911999.99999999
+Canko Cankov,41,10072000
+Ludmil Hranov,53,10878000
+Nikolai Kolev Kostadinov,41,11292000
+Konstantin Ivanov,44,11481000
+Ivajlo Ad’’rski,42,12321000
+Dimitar Hristov,41,12992000
+Blagovest Angelov,43,13073000
+Georgi Petrov,40,13358000
+Plamen Juterov,48,14105000
+Zosif Buresh,46,14577000
+Vladimir Andonov,51,14921000
+Vasilv Valkov,41,15260000
+Christian Kolev,40,16028000
+Georgi Kazakov,41,16153000
+Gorski Aleks,41,17941000
+Bojan Banovski,50,18082000</pre>
+
+<script>
+Highcharts.chart('scatterplot-psr2017-male40', {
+    credits: {
+        enabled: false
+    },
+
+    chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+    },
+    title: {
+        text: '40+ Male Runners in the 2017 Pirin Skyrun'
+    },
+    xAxis: {
+        title: {
+            enabled: true,
+            text: 'Age'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'Time'
+        },
+        type: 'datetime',
+        // dateTimeLabelFormats: {
+        //     second: "%H:%M:%S",
+        //     minute: "%H:%M:%S",
+        //     hour: "%H:%M:%S"
+        // },
+        reversed: true
+    },
+
+    legend:false,
+
+    plotOptions: {
+        scatter: {
+            marker: {
+                fillColor: 'blue',
+                fillOpacity: 0.3,
+                radius: 6,
+                states: {
+                    hover: {
+                        enabled: true,
+                        lineColor: 'rgb(100,100,100,)'
+                    }
+                }
+            },
+            states: {
+                hover: {
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<b>{point.key}</b><br>',
+                pointFormat: '{point.x} years old, <br> {point.y:%H:%M:%S}'
+            }
+        }
+    },
+
+    data: {
+        FirstRowAsNames:false,
+        csv: document.getElementById('csv-male40-psr2017').innerHTML,
+        seriesMapping: [{
+            name: 0,
+            x: 1,
+            y: 2
+        }]
+    },
+});
+</script>
+
+<script>
+Highcharts.chart('psr2017-gender', {
+    credits: {
+        enabled: false
+    },
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Number of Female vs. Male runners'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Gender',
+        colorByPoint: true,
+        data: [{
+            name: 'Female',
+            y: 17.39
+        }, {
+            name: 'Male',
+            y: 82.61,
+        }, {
+    }]
+}]
+});
+
+</script>

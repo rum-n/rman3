@@ -1,0 +1,570 @@
+---
+title: Sofia Marathon 2016
+---
+
+<div class="container">
+
+    <section>
+    	<h1 class="header center blue-text">Sofia Marathon 2016</h1>
+	    <div class="row">
+            <div class="content">
+                <div id="scatterplot-sm2016-female"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="row">
+            <div class="content">
+                <div id="scatterplot-sm2016-male"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="row">
+            <div class="content">
+                <div id="sm2017-gender"></div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+        <ul>
+            <li>1. Data taken from the Sofia Marathon <a href="http://www.marathonsofia.com/?lang=en">official website.</a></li>
+            <li>2. Data normalized with R.</li>
+            <li>3. Charts created with <a href="https://www.highcharts.com">Highcharts.</a></li>
+        </ul>
+        <br>
+</div>
+
+<pre id="csv-female" style="display: none">Name,Age,Time
+Belaynesh YIGEZU,29,9578000.0016
+Agnes CHEBET,21,9609000.0012
+Gelane SENBETE,27,9790999.9992
+Hellen KIMUTAI,39,10103000.0004
+Sladana PERUNOVIC,33,10159999.9992
+Nikolina SUSTIC,30,10224000
+Radosveta SIMEONOVA,24,10589000.0004
+Nursel KARATAS,29,10690999.9992
+Anita KRASTEVA,37,10829999.9988
+Hristina KOZARAVA,33,11214000
+Nadejda ANGELOVA,29,11595999.9996
+Margherita FRATERNALI,50,12526999.9992
+Zornitza HRISTOVA,36,12556000.0008
+Malinka VACKICHEVA,53,12711999.9996
+Katerina DOKUZOVA,23,13246999.9992
+Alena ASKIRKINA,27,13520999.9988
+Dafinka TODOROVA,38,13654000.0008
+Virginia GABROVSKA,37,13660999.9992
+Paolina MINEVA,38,13979000.0016
+Borislava VIDEVA,36,14148000
+Stefka STOYANOVA,52,14232999.9996
+Yordanka KOSTOVA,25,14280000.0012
+Sunny CALITZ-PATEL,50,14312999.9988
+Mariya ANGELOVA,37,14406000.0012
+Erika STIRMANN,56,14550000.0012
+Ivelina KALCHEVA,45,14793000.0012
+Viktoriya SAKSANOVA,32,15495000.0012
+Maya TANEVA,42,15513000.0012
+Andrea HERTINGER,55,15554000.0016
+Oksana BOCHKOVAR,43,15905000.0016
+Vera MITOVA,53,16032999.9996
+Maya IVANOVA,30,16067000.0016
+Ulla MAYFIELD,60,16080999.9984
+Denitsa KOEVA,37,16085000.0016
+Gergana MIHAYLOVA,38,16232000.0004
+Magdalena ENEVA,27,16252999.9992
+Ema BORISOVA,33,16431000.0012
+Yoanna MADZHAROVA,34,16535000.0016
+Maria STEFANOVA,39,16724000.0016
+Viktoria DANOVA,28,16724000.0016
+?Milia HRISTOVA,41,17178000.0012
+Hristomira TODOROVA,45,17443000.0008
+Denitsa TODOROVA,43,17600000.0004
+Victoria SENDOVA,41,17777999.9988
+Daniela VASILEVA,43,17853000.0012
+Simona NEDELCHEVA,24,18470000.0016
+Milena KANCHEVA,44,18533999.9988
+Lilyana BANOVSKA,47,18555000.0012
+Victoria NEDELCHEVA,52,19029999.9996
+Angelina BONEVA,26,19041999.9984
+Nevena KOSTOVA,30,19278000
+Alexandra WEBER,44,19292000.0004
+Desislava NEDYALKOVA,30,19370999.9988
+Boyka ARSOVA,67,19487999.9988
+</pre>
+
+<script>
+Highcharts.chart('scatterplot-sm2016-female', {
+    credits: {
+        enabled: false
+    },
+
+    chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Female Runners in the 2016 Sofia Marathon'
+    },
+    xAxis: {
+        title: {
+            enabled: true,
+            text: 'Age'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'Time'
+        },
+        type: 'datetime',
+        // dateTimeLabelFormats: {
+        //     second: "%H:%M:%S",
+        //     minute: "%H:%M:%S",
+        //     hour: "%H:%M:%S"
+        // },
+        reversed: true
+    },
+
+    legend:false,
+
+    plotOptions: {
+        scatter: {
+            marker: {
+                fillColor: 'orange',
+                fillOpacity: 0.3,
+                radius: 6,
+                states: {
+                    hover: {
+                        enabled: true,
+                        lineColor: 'rgb(100,100,100,)'
+                    }
+                }
+            },
+            states: {
+                hover: {
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<b>{point.key}</b><br>',
+                pointFormat: '{point.x} years old, <br> {point.y:%H:%M:%S}'
+            }
+        }
+    },
+
+    data: {
+    	FirstRowAsNames:false,
+    	csv: document.getElementById('csv-female').innerHTML,
+    	seriesMapping: [{
+    		name: 0,
+    		x: 1,
+    		y: 2
+    	}]
+    },
+});
+</script>
+
+<br>
+
+<pre id="csv-male" style="display: none">>Name,Age,Time
+Gudeta BIRATU,30,8145000
+Teferi BALCHA,34,8156000.00000002
+Moses KIBERE,30,8179999.99999999
+Abel ROP,30,8264999.99999999
+Ahmed NASEF,27,8410000
+Patrick MURIUKI,27,8529999.99999998
+Ismail SENANDJI,31,8902000.00000001
+Ilia KUCAROV,31,8876999.99999999
+Shaban MUSTAFA,39,9000000
+Hasan TURGUT,25,9173999.99999999
+Milos MOLOVANOVIC,28,9221000
+Gancho SLAVOV,41,9420000.00000001
+Rosen LILOV,43,9452000.00000002
+Patrick KACZYNSKI,27,9878000
+Srdjan SAMARDZIC,28,10133000
+Dilyan BOYADZHIEV,32,10214000
+Milos DRAGOVIC,24,10382000
+Evgeni VASILEV,32,10539000
+Nathan ANDREWS,42,10618000
+Kristian KIRILOV,24,10803000
+Igor JAKIMOVSKI,43,10821000
+Vesselin TZOTCHEV,48,10788000
+Gambini EMANUELE,47,10970000
+Serioza KUCHUKOV,62,10989000
+Alexander SPASOV,24,11000000
+Miroslav FILKOV,24,11085000
+Borislav BURLAK,39,11148000
+Danny STONES,35,11167000
+Martin GRAMATIKOV,44,11466000
+Ivan TSANOV,47,11613000
+Stanislav MANEV,40,11667000
+Ludwig DUCH,54,11702000
+Dimitar DIMITROV,28,11821000
+Velichko MANOLOV,34,11831000
+Mihail STEPANOV,44,11959000
+Samuel PAPOT,34,11969000
+Jean-Luc POTIER,47,11987000
+Christo KABADAEV,35,12062000
+Pavlin DIMITROV,44,12080000
+Roumen JORDANOV,38,12088000
+Svetoslav TRAYKOV,41,12208000
+Paolo DEAVI,45,12292000
+Velichko DIMITROV,55,12304000
+Martin BACHEV,36,12314000
+Stefan LAZAOV,30,12347000
+Levant SEBASTIEN,39,12352000
+Miguel RIBES,45,12368000
+Didier GENTRIC,57,12404000
+Boyan BOYCHEV,46,12425000
+Hristo DOBREV,30,12456000
+Stanimir DIMITROV,27,12456000
+Simon HADLEY,30,12470000
+Andrea MIORI,50,12478000
+Konstantin PRODANOV,40,12507000
+Vencislav PETKOV,35,12585000
+Ivan BESHEV,35,12586000
+Atanas DIZOV,43,12604000
+Gillet GERARD,53,12619000
+Christoph RANDT,63,12633000
+Georgi SEMKOVSKI,49,12649000
+Emil IVANOV,44,12692000
+Ivaylo PETKOV,33,12682000
+Plamen IVANOV,54,12728000
+Tim TEEGE,33,12718000
+Lachezar STOYCHEV,28,12743000
+Martin CHOY,28,12743000
+Mihail IVANOV,28,12743000
+Georgi GEORGIEV,37,12735000
+Franco PLACUCCI,60,12760000
+Stephen PARKER,62,12754000
+Christos FYLLARIDIS,44,12806000
+Magnus BJOERKLUND,43,12865000
+Kalin STOYANOV,29,12916000
+Luben KENANOV,61,12938000
+Aitor CESPON,23,12970000
+Stanimir BOROV,24,12984000
+Zahari HUSEIN,33,13008000
+Georgi MARINOV,22,13042000
+Hristo TSVETKOV,23,13055000
+Ivan BORISOV,48,13053000
+Daniel KUBASHLIEV,28,13076000
+Vencislav NEDYALKOV,32,13082000
+Pierluigi DEBANI,50,13104000
+Hristo RUMENOV,34,13171000
+Martin PEPELDZHIYSKI,34,13204000
+Alexander STOYANOV,48,13236000
+Tihomir BLAGOEV,32,13228000
+Velizar BAGAROV,24,13260000
+Dobri DOBREV,32,13254000
+Ivan MANCHEV,28,13291000
+Nikola MARKOV,28,13281000
+Daniel IVANOV,27,13285000
+Migot PATRICE,43,13394000
+Grigor VARBANOV,37,13406000
+Petyo NIKOLOV,44,13394000
+Mitko KLYAVKOV,51,13421000
+Martin BLOMQVIST,33,13452000
+Jean MARDUEL,58,13460000
+Philippe WAROUX,48,13459000
+Christos ZILOUDIS,57,13487000
+Stergios MATSIOS,52,13489000
+Momchil NAIDENOV,35,13493000
+Martin MORGAN,62,13557000
+Dimitar BONCHEV,48,13576000
+Simeon CHERVENKOV,28,13589000
+Lyubomir TODOROV,27,13589000
+Lubomir MARINOV,39,13642000
+Pierluigi PARPINEL,50,13711000
+Anton DOBREV,54,13775000
+Plamen VALCHEV,51,13793000
+Strahil DIMITROV,22,13794000
+Rumen MANEV,28,13802000
+Hristo GOCHEV,29,13802000
+Vladimir VLADIMIROV,48,13834000
+Danail RANGELOV,43,13838000
+Ryszard ELLERT,58,13846000
+Sergio LOPEZ,25,13866000
+Todor DIMITROV,42,13872000
+Alexander NAIDENOV,58,13883000
+Francesco FERRUCCI,45,13888000
+Boyan YORDANOV,38,13899000
+Mihail OGNYANOV,33,13949000
+Liam ROYLE,27,13953000
+Ivan KOSTOV,26,13988000
+Slavi SAVOV,46,13987000
+Stephen PRICE,58,14003000
+Vojislav CURULIC,64,14061000
+Boris CHAKALOV,29,14056000
+Andreas PALERAS,40,14089000
+John KINCHEN,55,14123000
+Nikolay TANKOV,46,14126000
+Kenneth SCHOOTEN,49,14065000
+Borislav KAPUKARANOV,30,14138000
+Reinhold LOPATKA,57,14151000
+Jann HOFFMANN,46,14138000
+Ivan MITOVSKI,26,14154000
+Marian DIMITROV,29,14157000
+Dimitar DIMKIN,32,14154000
+Ivan GRAHOVSKI,20,14154000
+Ivan IVANOV,30,14167000
+Lachezar CHOLAKOV,40,14234000
+Miroslav KUTEV,43,14238000
+David GOODWIN,50,14313000
+Hristo DIMITROV,53,14347000
+Kiril DIMITROV,46,14334000
+Nikola PENCHEV,28,14341000
+Dalo PASQUALE,58,14403000
+Colin LONGWORTH,64,14447000
+Todor PATARLIEV,35,14475000
+Hassan MOUTRIBI,47,14510000
+Vincent ZWICKERT,52,14511000
+Atanas ATANASSOV,45,14524000
+James HOLLAND,45,14532000
+Bernie PRIEKULIS,61,14532000
+Dmitri MOMOTOV,30,14584000
+Ivan STOYANOV,41,14607000
+Michael GORZINSKI,29,14511000
+Dimoutis PANTELIS,54,14634000
+Robert HARRIS,57,14666000
+Nikolay KRASTEVA,32,14692000
+Dimitar YANKOV,31,14697000
+Plamen SLAVOV,33,14714000
+Krasimir MILUSHEV,30,14726000
+Stefan URILSKI,48,14745000
+Jeremy HASLETT,58,14764000
+Ivo TZANKOV,53,14826000
+Stefan TODOROV,37,14831000
+Aleksey VASILEV,48,14847000
+Emmanuel ROUX,42,14861000
+Plamen ALEXIEV,29,14924000
+Alfred DEBONO,69,14906000
+Gary OBRIEN,53,14926000
+Kalin BOEVSKI,34,14929000
+Krasimir LYUBOMIROV,42,14945000
+Radi MILEV,69,14976000
+Georgi KOLEV,52,14989000
+Jose MONTON-CRUZ,35,15010000
+Hristiyan DIMITROV,27,14996000
+Stanislav RADKOV,28,14996000
+Daniel DILKOV,28,15035000
+Plamen PENOV,27,15073000
+Mario RICCI,59,15082000
+Cotinaut PHILIPPE,47,15136000
+Bojan ALEKSIC,34,15168000
+Emil EVTIMOV,28,15205000
+Yordan ILIEV,30,15205000
+Morten BLOCK,36,15214000
+Angelo CARICATO,52,15231000
+Ivan RADEV,36,15262000
+Hristo STOIANOV,32,15262000
+Ivelin YONKOV,43,15279000
+Rosen RUSEV,27,15283000
+Martin RALKOVSKI,41,15289000
+Volen MLADENOV,32,15325000
+Alexander DOMNANOVICH,41,15326000
+Veroslav TEOPHILOV,37,15395000
+Ivan STANCHEV,50,15404000
+Aragon BLAI,42,15414000
+Pedro RAMOS,44,15415000
+Lyudmil ATANASOV,33,15433000
+Bernhard HERTINGER,62,15459000
+Ventsislav TRIFONOV,49,15463000
+Stefan SHIVAROV,35,15608000
+Vittorio CERQUENI,61,15629000
+Dobromir GEORGIEV,35,15771000
+Igor IGNATOV,48,15719000
+Tcanio ARABADJIEV,56,15854000
+Gerald SCHUMANN,59,15888000
+Michele CRESCENTINI,46,15905000
+Tsvetan GEORGIEV,26,15928000
+Stanislav IVANOV,43,16056000
+Benjamin KANE,33,16054000
+Momchil DIMITROV,25,16070000
+Georgi STOYCHEV,24,16189000
+Krassimir TRENEV,47,16169000
+Martin SIMEONOV,27,16232000
+Borislav BUMBAROV,42,16260000
+Simeon PETKOV,33,16345000
+Iskren STANEV,49,16345000
+Guido CAMPEDELLI,67,16358000
+Anton ANDONOV,32,16398000
+Esa NIEMINEN,62,16408000
+Daniel YORDANOV,48,16524000
+Georgi CHOLAKOV,29,16569000
+Klaus NEUMANN,65,16587000
+Boris KACHOV,71,16641000
+Mladen DENKOV,25,16694000
+Dobri STEFANOV,35,16723000
+Detelin HRISTOV,35,16716000
+Momchil TODOROV,35,16836000
+Mauri VALAMA,72,16863000
+Jorma KURITTU,63,16866000
+Dimitar SHALVARDZIEV,30,16940000
+Ivan IVANOV,38,16993000
+Deyan TERZIEV,45,17146000
+Toshko TODOROV,23,17230000
+Dimitrii AKCHARLIEV,66,17254000
+Klaus-Peter ULMSCHNEIDER,55,17271000
+Yasen KIRILOV,29,17361000
+Unto LEINIKKA,65,17389000
+Vasileios KYRILLIDIS,59,17401000
+Ivelin PARVANOV,44,17586000
+Milen TZANOV,42,17647000
+Stefan STOYANOV,63,17780000
+Boris VASILEV,29,17780000
+Galin BORISOV,32,17795000
+Nikola GRIGOROV,27,17823000
+George ANDONOV,46,17828000
+Migaud PIERRE,72,17883000
+Uve STRIMANN,61,18036000
+Ivan YOSIFOV,35,18076000
+Ivan DIMOV,45,18378000
+Alexander DANCHEV,43,18463000
+Erhard FILTENBORG,78,18467000
+Wudarski ARKADIUSZ,45,18556000
+Krum KOSHAREVSKY,49,18558000
+Ignat GEORGIEV,26,18094000
+Georgi KRUMOV,25,18856000
+Georgi SEIZOV,79,18958000
+Shuhei TAKAHASHI,28,18957000
+Ivo TEODOSSIEV,33,19051000
+Miroslav GROZEV,32,19041000
+Valter BARTOLINI,60,19110000
+Maurice SANGAN,63,19133000
+Nikolay GEORGIEV,34,19130000
+Borislav YANKOV,64,19159000
+Pekka AIRAKSINEN,67,19173000
+Stanimir ILIEV,37,19201000
+JEAN Belle,52,19647000
+Milen CHECHEV,33,20058000
+Dimitar KYUSHEV,46,20287000
+Petar PETROV,81,21478000</pre>
+
+<script>
+Highcharts.chart('scatterplot-sm2016-male', {
+    credits: {
+        enabled: false
+    },
+
+    chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Male Runners in the 2016 Sofia Marathon'
+    },
+    xAxis: {
+        title: {
+            enabled: true,
+            text: 'Age'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'Time'
+        },
+        type: 'datetime',
+        // dateTimeLabelFormats: {
+        //     second: "%H:%M:%S",
+        //     minute: "%H:%M:%S",
+        //     hour: "%H:%M:%S"
+        // },
+        reversed: true
+    },
+
+    legend:false,
+
+    plotOptions: {
+        scatter: {
+            marker: {
+                radius: 6,
+                fillOpacity: 0.5,
+                states: {
+                    hover: {
+                        enabled: true,
+                        lineColor: 'rgb(100,100,100,0.5)'
+                    }
+                }
+            },
+            states: {
+                hover: {
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<b>{point.key}</b><br>',
+                pointFormat: '{point.x} years old, <br> {point.y:%H:%M:%S}'
+            }
+        }
+    },
+
+    data: {
+        FirstRowAsNames:false,
+        csv: document.getElementById('csv-male').innerHTML,
+        seriesMapping: [{
+            name: 0,
+            x: 1,
+            y: 2
+        }]
+    },
+});
+</script>
+
+<script>
+Highcharts.chart('sm2017-gender', {
+    credits: {
+        enabled: false
+    },
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Number of Female vs. Male runners'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Gender',
+        colorByPoint: true,
+        data: [{
+            name: 'Female',
+            y: 16.56,
+        }, {
+            name: 'Male',
+            y: 83.44,
+        }, {
+    }]
+}]
+});
+
+</script>
