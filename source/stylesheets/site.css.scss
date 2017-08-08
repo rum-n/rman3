@@ -14,7 +14,9 @@
 /*BACK BUTTON*/
 
 #backbutton {
-  padding: 2px;
+  padding: 1em;
+  display: inline-block;
+  margin: 1em;
 }
 
 .hvr-outline-out {
@@ -39,10 +41,10 @@
   transition-property: top, right, bottom, left;
 }
 .hvr-outline-out:hover:before, .hvr-outline-out:focus:before, .hvr-outline-out:active:before {
-  top: -13px;
-  right: -13px;
-  bottom: -13px;
-  left: -13px;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
 }
 
 /*END BACK BUTTON*/
