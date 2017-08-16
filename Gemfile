@@ -12,3 +12,5 @@ gem 'sinatra'
 gem 'pony'
 gem 'rack-test'
 
+ruby "2.3.1"
+
