@@ -11,6 +11,10 @@
   margin-right: auto; 
 }*/
 
+.homepage-header {
+  margin-bottom: 10px;
+}
+
 /*SOCIAL MEDIA DECORATION*/
 
 
@@ -23,38 +27,41 @@
 
 /*BACK BUTTON*/
 
-#backbutton {
-  padding: 1em;
-  display: inline-block;
-  margin: 1em;
-}
-
-.hvr-outline-out {
+/* Underline From Center */
+.hvr-underline-from-center {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   position: relative;
+  overflow: hidden;
 }
-.hvr-outline-out:before {
-  content: '';
+.hvr-underline-from-center:before {
+  content: "";
   position: absolute;
-  border: #0288D1 solid 4px;
-  top: 0;
-  right: 0;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
   bottom: 0;
-  left: 0;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: top, right, bottom, left;
-  transition-property: top, right, bottom, left;
+  background: black;
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
-.hvr-outline-out:hover:before, .hvr-outline-out:focus:before, .hvr-outline-out:active:before {
-  top: -8px;
-  right: -8px;
-  bottom: -8px;
-  left: -8px;
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+#backbutton {
+  padding: 0.5em;
+  display: inline-block;
+  margin: 0.5em;
 }
 
 /*END BACK BUTTON*/
@@ -146,13 +153,13 @@
 }
 
 ::-moz-selection { /* Code for Firefox */
-    color: #B3E5FC;
-    background: #795548;
+    color: #fff;
+    background: #0288D1;
 }
 
 ::selection {
-    color: #B3E5FC;
-    background: #795548;
+    color: #fff;
+    background: #0288D1;
 }
 
 span.stretch {

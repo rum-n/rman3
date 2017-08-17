@@ -1,4 +1,4 @@
-
+//=require jquery
 
 /*!
  * Materialize v0.100.1 (http://materializecss.com)
