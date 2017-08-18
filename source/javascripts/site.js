@@ -1,4 +1,3 @@
-//=require jquery
 
 /*!
  * Materialize v0.100.1 (http://materializecss.com)
@@ -8,7 +7,7 @@
 
 //////////////// ADDED BY ME
 
-
+$(document).ready(function(){$("body").hide().fadeIn(3000);});
 
 //////////////// END OF ADDED BY ME
 

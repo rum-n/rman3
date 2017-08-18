@@ -11,8 +11,12 @@
   margin-right: auto; 
 }*/
 
+.project-header {
+  padding-bottom: 20px; 
+}
+
 .homepage-header {
-  margin-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 /*SOCIAL MEDIA DECORATION*/
@@ -230,7 +234,7 @@ span.stretch {
 
  /*OVERRIDING DEFAULT CONTACT FORM COLORS*/
 
-.input-field input[type=text]:focus + label{
+/*.input-field input[type=text]:focus + label{
      color: #795548 !important;
    }
 
@@ -255,7 +259,7 @@ span.stretch {
 .input-field input[type=url]:focus {
      border-bottom: 1px solid #795548 !important;
      box-shadow: 0 1px 0 0 #795548 !important; 
-   }
+   }*/
 
 /*******************END*********************/
 
