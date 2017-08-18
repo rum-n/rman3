@@ -7,7 +7,7 @@
 
 //////////////// ADDED BY ME
 
-$(document).ready(function(){$("body").hide().fadeIn(3000);});
+$(document).ready(function(){$("body").hide().fadeIn(2000);});
 
 //////////////// END OF ADDED BY ME
 

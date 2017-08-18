@@ -234,32 +234,41 @@ span.stretch {
 
  /*OVERRIDING DEFAULT CONTACT FORM COLORS*/
 
-/*.input-field input[type=text]:focus + label{
-     color: #795548 !important;
+.input-field input[type=text]:focus + label{
+     color: grey !important;
    }
 
 .input-field input[type=text]:focus {
-     border-bottom: 1px solid #795548 !important;
-     box-shadow: 0 1px 0 0 #795548 !important; 
+     border-bottom: 1px solid grey !important;
+     box-shadow: 0 1px 0 0 grey !important; 
    }
 
 .input-field input[type=email]:focus + label{
-     color: #795548 !important;
+     color: grey !important;
    }
 
 .input-field input[type=email]:focus {
-     border-bottom: 1px solid #795548 !important;
-     box-shadow: 0 1px 0 0 #795548 !important; 
+     border-bottom: 1px solid grey !important;
+     box-shadow: 0 1px 0 0 grey !important; 
    }
 
 .input-field input[type=url]:focus + label{
-     color: #795548 !important;
+     color: grey !important;
    }
 
 .input-field input[type=url]:focus {
-     border-bottom: 1px solid #795548 !important;
-     box-shadow: 0 1px 0 0 #795548 !important; 
-   }*/
+     border-bottom: 1px solid grey !important;
+     box-shadow: 0 1px 0 0 grey !important; 
+   }
+
+.input-field textarea:focus + label {
+  color: grey !important;
+}
+
+.row .input-field textarea:focus {
+  border-bottom: 1px solid grey !important;
+  box-shadow: 0 1px 0 0 grey !important;
+}
 
 /*******************END*********************/
 
@@ -336,17 +345,17 @@ section {
 }
 
 .intro {
-  height: 90vh;
+  height: 100vh;
   background-color: #ffffff;
 }
 
-/*.intro-projects {
-  height: 100vh;
+.intro-projects {
+  height: 60vh;
   background-color: #ffffff;
-}*/
+}
 
 .intro-contact {
-  height: 85vh;
+  height: 60vh;
   background-color: #ffffff;
 }
 
