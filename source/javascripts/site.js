@@ -35,4 +35,26 @@ $(function() {
 
 // END CONTACT FORM
 
+// ABOUT ME POP UP
+
+$(function() {
+  
+  // contact form animations
+  $('#about').click(function() {
+    $('#aboutme').fadeToggle();
+  })
+
+  $('.BackToClose').click(function() {
+    var container = $("#aboutme");
+
+    { 
+      container.fadeOut();
+    }
+
+  })
+  
+});
+
+// END OF ABOUT ME
+
 //////////////// END OF ADDED BY ME

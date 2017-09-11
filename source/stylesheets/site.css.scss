@@ -1,14 +1,120 @@
 
-/*
-.project-container {
-  display: block;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto; 
-}*/
+/*ABOUT POP UP*/
+
+#aboutme {
+  border: 2px solid black;
+  display: none;
+  padding: 2em;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: gold;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+}
+
+.about-text {
+  
+}
+
+.about-text p {
+  color: black;
+  font-weight: 300;
+  font-size: 24pt;
+  font-family: 'Lato', sans-serif;
+}
+
+.about-text a {
+  text-decoration: bold;
+  color: black;
+}
+
+.about-text a:hover {
+  color: black;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.BackToClose {
+  position: absolute;
+  width: 46px;
+  height: 6px;
+  margin: 32px 12px;
+  right: 4%;
+  top: 4%;
+  border-radius: 4px;
+  background: black;
+  animation: element 2s ease infinite alternate;
+  
+  &::before,
+  &::after {
+    display: block;
+    position: absolute;
+    width: 28px;
+    height: 6px;
+    border-radius: 4px;
+    background: black;
+    content: "";
+  }
+  
+  &::before {
+    top: -14px;
+    animation: before 2s ease infinite alternate;
+  }
+  
+  &::after {
+    bottom: -14px;
+    animation: after 2s ease infinite alternate;
+  }
+}
+
+.BackToClose:hover {
+  opacity: 0.6;
+}
+
+@keyframes element {
+  0%, 30% {
+    transform: rotate(0deg);
+  }
+  
+  70%, 100% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes before {
+  0%, 30% {
+    width: 28px;
+    transform: rotate(-45deg) translateY(2px) translateX(-6px);
+  }
+  
+  70%, 100% {
+    width: 23px;
+    transform: rotate(-90deg) translateY(11px) translateX(-2px);
+  }
+}
+
+@keyframes after {
+  0%, 30% {
+    width: 28px;
+    transform: rotate(45deg) translateY(-2px) translateX(-6px);
+  }
+  
+  70%, 100% {
+    width: 23px;
+    transform: rotate(90deg) translateY(-11px) translateX(-2px);
+  }
+}
+
 
 /*CONTACT FORM*/
-
 
 * { box-sizing: border-box; }
 
@@ -23,12 +129,12 @@
 }
 
 #contactForm { 
-  border: 2px solid black;
+  border: 5px solid gold;
   display: none;
   padding: 2em;
   width: 500px;
   text-align: center;
-  background: grey;
+  background: #fff;
   position: fixed;
   top:50%;
   left:50%;
@@ -44,6 +150,7 @@ input, textarea {
   display: block; 
   width: 280px; 
   padding: .4em;
+  border: 2px solid black;
 }
 textarea { height: 80px; resize: none; }
 
@@ -63,12 +170,9 @@ textarea { height: 80px; resize: none; }
   color:gold;
 }
 
-/*END CONTACT FORM*/
-
 
 /*TRANSITIONS ON INTERNAL PAGES*/
 
-/*END TRANSITIONS*/
 
 /*HOVER BUTTON*/
 
