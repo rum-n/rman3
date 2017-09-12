@@ -1,4 +1,5 @@
 
+
 /*!
  * Materialize v0.100.1 (http://materializecss.com)
  * Copyright 2014-2017 Materialize
@@ -33,8 +34,6 @@ $(function() {
   
 });
 
-// END CONTACT FORM
-
 // ABOUT ME POP UP
 
 $(function() {
@@ -55,6 +54,26 @@ $(function() {
   
 });
 
-// END OF ABOUT ME
+// PROJECTS PAGE
+
+$(function() {
+  
+  // contact form animations
+  $('#projects').click(function() {
+    $('#myprojects').fadeToggle();
+  })
+
+  $('.BackToClose-proj').click(function() {
+    var container = $("#myprojects");
+
+    { 
+      container.fadeOut();
+    }
+
+  })
+  
+});
+
+
 
 //////////////// END OF ADDED BY ME
