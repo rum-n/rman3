@@ -18,6 +18,7 @@ page "/results/*", :layout => "results"
 page "/sofiamarathon-2016"
 page "/pirinskyrun-2017"
 page "/spokesandspikes-2017"
+page "/ludogorets-2017"
 
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/

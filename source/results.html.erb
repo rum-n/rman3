@@ -2,7 +2,10 @@
 title: Race Results
 ---
 
-<div class="main-projects">
+<html class="results">
+
+<div class="main-results">
+  <div class="main-projects">
     <h1 class="header">Race Results</h1>
 
             <p>Recently, I've been fascinated with the world of data science and data visualization as a sub-category. Thinking of projects to practice on, I decided to combine it with another passion of mine - running.</p><p>On the right is a list of running events. I've participated in most of the events, which motivated me to visualize the results in an interactive way.</p><p>This section in constantly in development, as I'm trying to advance my data visualization skills. I hope the charts are interesting and useful for others as well.</p>
@@ -11,29 +14,40 @@ title: Race Results
 </div>
 
       <div class="race-listing">
+
+          <div class="project">
+          <img src="../images/ludogorets.jpg">
+            <%= link_to '
+                  <h1>Ludogorets 2017</h1>
+                ', '/ludogorets-2017.html' %>
+          </div>
         
-          <div class="icon-block">
-            <%= link_to '<div class="project">
-                <img src="../images/pirinSkyrun.png">
+          <div class="project">
+          <img src="../images/pirinSkyrun.png">
+            <%= link_to '
                   <h1>Pirin Skyrun 2017</h1>
-                </div>', '/pirin-skyrun2017.html' %>
+                ', '/pirin-skyrun2017.html' %>
           </div>
         
-          <div class="icon-block">
-            <%= link_to '<div class="project">
-                <img src="../images/spokes2017.png">
+          
+          <div class="project">
+          <img src="../images/spokes2017.png">
+            <%= link_to '
                   <h1>Spokes & Spikes 2017</h1>
-                </div>', '/spokesandspikes-2017.html' %>
+                ', '/spokesandspikes-2017.html' %>
           </div>
+          
         
-          <div class="icon-block">
-            <%= link_to '<div class="project">
-                <img src="../images/sofiamarathonlogo.jpg">
+          <div class="project">
+          <img src="../images/sofiamarathonlogo.jpg">
+            <%= link_to '
                   <h1>Sofia Marathon 2016</h1>
-                </div>', '/sofiamarathon-2016.html' %>
+                ', '/sofiamarathon-2016.html' %>
           </div>
         
       </div>
+  </div>
+</html>
 
 
 

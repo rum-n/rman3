@@ -1,9 +1,43 @@
 
 /*RACE RESULTS VIZUALISATION PAGE*/
 
+.results {
+  background: #fff;
+}
+
+.charts {
+  padding-bottom: 10em;
+}
+
+.credits p{
+  font-family:'Lato', sans-serif;
+  color: grey;
+  list-style: none;
+  line-height: 50%;
+  font-size: 12pt;
+}
+
+.credits a{
+  color: grey;
+  font-weight: 400;
+}
+
 .main-projects {
   padding: 7% 60% 4% 7%;
   position: fixed;
+}
+
+.main-projects p {
+  color: #000;
+}
+
+.main-projects a {
+  color: #000;
+}
+
+.main-projects a:hover {
+  font-weight: 600;
+  color: #000;
 }
 
 .race-listing {
@@ -12,14 +46,11 @@
 }
 
 .project h1 {
-  color: #fff;
-  font-weight: 300;
+  color: #000;
+  font-weight: 600;
   font-size: 16pt;
-  font-family: 'Lato', sans-serif;
-}
-
-.project-listing {
-  display: inline;
+  font-family: 'Courier New', sans-serif;
+  text-transform: uppercase;
 }
 
  .project {
@@ -27,7 +58,6 @@
   padding-right: 10px;
   padding-top: 10px;
   padding-bottom: 20px;
-  margin-bottom: 5%;
   line-height: 12pt;
   color: #000;
 }
@@ -40,7 +70,7 @@
       width: 100%; } }
 
   .project img {
-    width: 50%;
+    width: 40%;
     margin-bottom: 3px;
     border-radius: 1px;
     -webkit-border-radius: 1px;
@@ -550,7 +580,7 @@ html {
   left: 50%;
   right: 50%;
   bottom: 0;
-  background: #fff;
+  background: #000;
   height: 2px;
   -webkit-transition-property: left, right;
   transition-property: left, right;
@@ -622,7 +652,7 @@ span.stretch {
  .header {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 40pt;
-  color: #fff;
+  color: #000;
  }
 
 

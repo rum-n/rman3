@@ -2,34 +2,38 @@
 title: Sofia Marathon 2016
 ---
 
+<html class="results">
+
 <div class="main-projects">
 
     <h1 class="header">Sofia Marathon 2016</h1>
-    <p class="race-text">This one was quite emotional. It's my first ever full marathon, which makes it a big deal. I ran it together with my running buddies after preparing for months, so crossing the finish line was a unique feeling.</p>
+    <p>This one was quite emotional.</p><p>It's my first ever full marathon, which makes it a big deal. I ran it together with my running buddies after preparing for months, so crossing the finish line was a unique feeling.</p>
 
-    <a href="/index.html" class="hvr-underline-from-center" id="backbutton">BACK TO RACE RESULTS</a>
-    <a href="/results" class="hvr-underline-from-center" id="backbutton">BACK TO MAIN PAGE</a>
+
+    <p><a href="/results" class="hvr-underline-from-center" id="backbutton">BACK TO RACE RESULTS</a></p>
+    <p><a href="/index.html" class="hvr-underline-from-center" id="backbutton">BACK TO MAIN PAGE</a></p>
 
     <hr>
-        <ul>
-            <li>1. Data taken from the Sofia Marathon <a href="http://www.marathonsofia.com/?lang=en">official website.</a></li>
-            <li>2. Data normalized with R.</li>
-            <li>3. Charts created with <a href="https://www.highcharts.com">Highcharts.</a></li>
-        </ul>
+
+        <div class="credits">
+            <p>1. Data taken from the Sofia Marathon <a href="http://www.marathonsofia.com/?lang=en">official website.</a></p>
+            <p>2. Data normalized with R.</li>
+            <p>3. Charts created with <a href="https://www.highcharts.com">Highcharts.</a></p>
+        </div>
 </div>
 
-
-
-    <div class="race-listing">
-
+<div class="race-listing">
+    <div class="charts">
         <div id="scatterplot-sm2016-female"></div>
-        
-        <div id="scatterplot-sm2016-male"></div>
-     
-        <div id="sm2017-gender"></div>
-
     </div>
-
+    <div class="charts">
+        <div id="scatterplot-sm2016-male"></div>
+     </div>
+     <div class="charts">
+        <div id="sm2017-gender"></div>
+    </div>
+</div>
+</html>
 
 <pre id="csv-female" style="display: none">Name,Age,Time
 Belaynesh YIGEZU,29,9578000.0016
@@ -89,6 +93,7 @@ Boyka ARSOVA,67,19487999.9988
 </pre>
 
 <script>
+Highcharts.setOptions(Highcharts.theme);
 Highcharts.chart('scatterplot-sm2016-female', {
     credits: {
         enabled: false
