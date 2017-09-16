@@ -1,5 +1,10 @@
 
 @font-face {
+font-family: 'Helvetica';
+src: url(fonts/Helvetica.dfont);
+}
+
+@font-face {
 font-family: 'Bebas Neue';
 src: url(fonts/BebasNeue.otf);
 }
@@ -19,7 +24,7 @@ src: url(fonts/BebasNeue.otf);
 }
 
 .credits p{
-  font-family:'Oswald', sans-serif;
+  font-family:'Helvetica', sans-serif;
   color: grey;
   list-style: none;
   line-height: 50%;
@@ -122,7 +127,7 @@ src: url(fonts/BebasNeue.otf);
 /*PROJECTS POP UP*/
 
 #projects-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   font-size: 25pt;
   color: gold;
 }
@@ -150,7 +155,7 @@ src: url(fonts/BebasNeue.otf);
   color: #fff;
   font-weight: 300;
   font-size: 16pt;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
   @media (max-width: 1200px) {
@@ -260,7 +265,7 @@ src: url(fonts/BebasNeue.otf);
   color: black;
   font-weight: 300;
   font-size: 24pt;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
   @media (max-width: 1200px) {
@@ -574,7 +579,7 @@ hr {
 }
 
 .copyright {
-  font-family: "Oswald", sans-serif;
+  font-family: "Helvetica", sans-serif;
   color: grey;
   font-size: 10pt;
   padding: 1em;
