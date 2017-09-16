@@ -5,6 +5,10 @@
   background: #fff;
 }
 
+#results-homepage {
+  position: relative;
+}
+
 .charts {
   padding-bottom: 10em;
 }
@@ -23,13 +27,28 @@
 }
 
 .main-projects {
-  padding: 7% 60% 4% 7%;
+  width: 40%;
+  padding-left: 7%;
+  padding-top: 7%;
   position: fixed;
 }
 
 .main-projects p {
   color: #000;
 }
+
+  @media (max-width: 1200px) {
+    .main-projects p{
+      font-size: 14pt; }
+      .main-projects{
+        position: relative;
+        width: 80%}}
+  @media (max-width: 992px) {
+    .main-projects p{
+      font-size: 12pt;}
+    .main-projects{
+      position:relative;
+      width:90%;}}
 
 .main-projects a {
   color: #000;
@@ -41,9 +60,23 @@
 }
 
 .race-listing {
-  padding: 7% 7% 4% 50%;
-  
+  padding-top: 7%;
+  padding-right: 7%;
+  padding-bottom: 4%;
+  padding-left: 50%;
+  float: right;
 }
+
+  @media (max-width: 1200px) {
+    .race-listing{
+      position: relative;
+      width: 80%;
+      padding-left: 7%;}}
+  @media (max-width: 992px) {
+    .race-listing{
+      position:relative;
+      width:90%;
+      padding-left: 7%;}}
 
 .project h1 {
   color: #000;
@@ -114,6 +147,15 @@
   font-size: 16pt;
   font-family: 'Lato', sans-serif;
 }
+
+  @media (max-width: 1200px) {
+    #myprojects p{
+      font-size: 12pt; }
+    #projects-title{
+      font-size: 18pt;}}
+  @media (max-width: 992px) {
+    #myprojects p{
+      font-size: 10pt; } }
 
 *,
 *::before,
@@ -215,6 +257,13 @@
   font-size: 24pt;
   font-family: 'Lato', sans-serif;
 }
+
+  @media (max-width: 1200px) {
+    #aboutme p{
+      font-size: 14pt; }}
+  @media (max-width: 992px) {
+    #aboutme p{
+      font-size: 12pt; } }
 
 #aboutme a {
   text-decoration: bold;

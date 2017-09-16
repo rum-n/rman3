@@ -2,66 +2,43 @@
 title: Pirin Skyrun 2017
 ---
 
-<div class="nav-wrapper container">
-      <ul class="right hide-on-med-and-down">
-        <li>
-          <a href="/index.html" class="hvr-underline-from-center" id="backbutton">HOME</a>
-        </li>
-      </ul>
-      <ul class="right hide-on-med-and-down">
-        <li>
-          <a href="/results" class="blue-text hvr-underline-from-center" id="backbutton">BACK</a>
-        </li>
-      </ul>
-</div>
+<html class="results">
 
-<div class="container">
+<div class="main-projects">
 
-   <section>
-	   	<div class="race-title">
-			<h3 class="header left blue-text">Pirin Skyrun 2017</h3>
-		</div>
+    <h1 class="header">Pirin Skyrun 2017</h1>
+    <p>OK, I didn't actually go to this gruelling trail run.</p><p>It was just a fun thing to visualize.</p><p>One thing you can clearly see from most charts is the male vs. female participation trend. Female participants seem to be aroung 17% in most races.</p>
 
-	    <div class="row">
-            <div class="content">
-                <div id="scatterplot-psr2017-female"></div> 
-            </div>
-        </div>
-
-    </section>
-
-    <section>
-        <div class="row">
-            <div class="content">
-                <div id="scatterplot-psr2017-male"></div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="row">
-            <div class="content">
-                <div id="scatterplot-psr2017-male40"></div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="row">
-            <div class="content">
-                <div id="psr2017-gender"></div>
-            </div>
-        </div>
-    </section>
+    <p><a href="/results" class="hvr-underline-from-center" id="backbutton">BACK TO RACE RESULTS</a></p>
+    <p><a href="/index.html" class="hvr-underline-from-center" id="backbutton">BACK TO MAIN PAGE</a></p>
 
     <hr>
-        <ul>
-            <li>1. Data taken from <a href="https://drace.bg/event/79/results">Drace.</a></li>
-            <li>2. Data normalized with R.</li>
-            <li>3. Charts created with <a href="https://www.highcharts.com">Highcharts.</a></li>
-        </ul>
-        <br>
+
+        <div class="credits">
+            <p>1. Data taken from <a href="https://drace.bg/event/79/results">Drace.</a></p>
+            <p>2. Data normalized with R.</p>
+            <p>3. Charts created with <a href="https://www.highcharts.com">Highcharts.</a></p>
+        </div>
 </div>
+
+    <div class="race-listing">
+            <div class="charts">
+                <div id="scatterplot-psr2017-female"></div> 
+            </div>
+
+            <div class="charts">
+                <div id="scatterplot-psr2017-male"></div>
+            </div>
+
+            <div class="charts">
+                <div id="scatterplot-psr2017-male40"></div>
+            </div>
+
+            <div class="charts">
+                <div id="psr2017-gender"></div>
+            </div>
+    </div>
+</html>
 
 
 
