@@ -264,7 +264,7 @@ src: url(fonts/BebasNeue.otf);
 #aboutme p {
   color: black;
   font-size: 20pt;
-  font-family: 'Courier New', sans-serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
   @media (max-width: 1200px) {
@@ -602,6 +602,13 @@ hr {
   padding-left: 7%;
   position: absolute;
 }
+
+  @media (max-width: 1200px) {
+    .main{
+      width: 90%}}
+  @media (max-width: 992px){
+    .main{
+      width: 90%}}
 
 a {
   color: #fff;
