@@ -1,4 +1,9 @@
 
+@font-face {
+font-family: BebasNeue;
+src: url(/BebasNeue.otf);
+}
+
 /*RACE RESULTS VIZUALISATION PAGE*/
 
 .results {
@@ -14,7 +19,7 @@
 }
 
 .credits p{
-  font-family:'Lato', sans-serif;
+  font-family:'Oswald', sans-serif;
   color: grey;
   list-style: none;
   line-height: 50%;
@@ -117,7 +122,7 @@
 /*PROJECTS POP UP*/
 
 #projects-title {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 25pt;
   color: gold;
 }
@@ -145,7 +150,7 @@
   color: #fff;
   font-weight: 300;
   font-size: 16pt;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
   @media (max-width: 1200px) {
@@ -172,7 +177,7 @@
   top: 4%;
   border-radius: 4px;
   background: gold;
-  animation: element 2s ease infinite alternate;
+  animation: element 1s ease infinite alternate;
   
   &::before,
   &::after {
@@ -187,12 +192,12 @@
   
   &::before {
     top: -14px;
-    animation: before 2s ease infinite alternate;
+    animation: before 1s ease infinite alternate;
   }
   
   &::after {
     bottom: -14px;
-    animation: after 2s ease infinite alternate;
+    animation: after 1s ease infinite alternate;
   }
 }
 
@@ -255,7 +260,7 @@
   color: black;
   font-weight: 300;
   font-size: 24pt;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
   @media (max-width: 1200px) {
@@ -289,7 +294,7 @@
   top: 4%;
   border-radius: 4px;
   background: black;
-  animation: element 2s ease infinite alternate;
+  animation: element 1s ease infinite alternate;
   
   &::before,
   &::after {
@@ -304,12 +309,12 @@
   
   &::before {
     top: -14px;
-    animation: before 2s ease infinite alternate;
+    animation: before 1s ease infinite alternate;
   }
   
   &::after {
     bottom: -14px;
-    animation: after 2s ease infinite alternate;
+    animation: after 1s ease infinite alternate;
   }
 }
 
@@ -379,6 +384,17 @@
   transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%)
 }
+
+  @media (max-width: 1200px) {
+    #contactForm{
+      width: 350px;
+      height: 500px;
+      padding: 1em;}}
+  @media (max-width: 992px){
+    #contactForm{
+      width: 350px;
+      height: 500px;
+      padding:1em;}}
 
 input, textarea { 
   margin: .8em auto;
@@ -633,8 +649,8 @@ html {
   height: 2px;
   -webkit-transition-property: left, right;
   transition-property: left, right;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
