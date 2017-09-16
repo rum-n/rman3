@@ -265,7 +265,7 @@ src: url(fonts/BebasNeue.otf);
   color: black;
   font-weight: 300;
   font-size: 24pt;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Helvetica', 20pt sans-serif;
 }
 
   @media (max-width: 1200px) {
@@ -592,7 +592,6 @@ hr {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 130px;
   color: #fff;
-  font-weight: 900;
   line-height: 80%;
   text-transform: uppercase;
 }
