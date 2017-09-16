@@ -154,8 +154,7 @@ src: url(fonts/BebasNeue.otf);
 
 #myprojects p {
   color: #fff;
-  font-weight: 300;
-  font-size: 16pt;
+  font-size: 14pt;
   font-family: 'Helvetica', sans-serif;
 }
 
@@ -264,9 +263,8 @@ src: url(fonts/BebasNeue.otf);
 
 #aboutme p {
   color: black;
-  font-weight: 300;
-  font-size: 24pt;
-  font-family: 'Helvetica', sans-serif;
+  font-size: 20pt;
+  font-family: 'Courier New', sans-serif;
 }
 
   @media (max-width: 1200px) {
@@ -598,7 +596,10 @@ hr {
 }
 
 .main {
-  padding: 7% 55% 4% 7%;
+  width: 45%;
+  padding-top: 7%;
+  padding-bottom: 4%;
+  padding-left: 7%;
   position: absolute;
 }
 
