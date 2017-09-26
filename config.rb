@@ -26,6 +26,9 @@ activate :directory_indexes
 
 activate :relative_assets
 activate :sprockets
+activate :gzip
+activate :imageoptim
+activate :minify_html
 # proxy(
 #   '/this-page-has-no-template.html',
 #   '/template-file.html',
@@ -48,6 +51,6 @@ set :relative_links, true
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
+  activate :minify_css
+  activate :minify_javascript
 end

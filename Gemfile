@@ -11,6 +11,9 @@ gem 'sendgrid-ruby'
 gem 'sinatra'
 gem 'pony'
 gem 'rack-test'
+gem 'oj'
+gem "middleman-imageoptim", :git => "https://github.com/plasticine/middleman-imageoptim", :branch => "master"
+gem "middleman-minify-html"
 
 ruby "2.3.1"
 

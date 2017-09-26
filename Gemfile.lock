@@ -1,3 +1,14 @@
+GIT
+  remote: https://github.com/plasticine/middleman-imageoptim
+  revision: a539caef0d2f9a23704ed36cf36c7945d2282c62
+  branch: master
+  specs:
+    middleman-imageoptim (0.2.1)
+      image_optim (~> 0.25.0)
+      image_optim_pack (~> 0.2.1)
+      middleman-cli
+      middleman-core (>= 3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -37,17 +48,31 @@ GEM
     erubis (2.7.0)
     eventmachine (1.2.5)
     execjs (2.7.0)
+    exifr (1.3.2)
     fast_blank (1.0.0)
     fastimage (2.1.0)
     ffi (1.9.18)
+    fspath (3.1.0)
     haml (5.0.2)
       temple (>= 0.8.0)
       tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     hashie (3.5.6)
+    htmlcompressor (0.2.0)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
+    image_optim (0.25.0)
+      exifr (~> 1.2, >= 1.2.2)
+      fspath (~> 3.0)
+      image_size (~> 1.5)
+      in_threads (~> 1.3)
+      progress (~> 3.0, >= 3.0.1)
+    image_optim_pack (0.2.3)
+      fspath (>= 2.1, < 4)
+      image_optim (~> 0.19)
+    image_size (1.5.0)
+    in_threads (1.4.0)
     kramdown (1.14.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -98,6 +123,9 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
+    middleman-minify-html (3.4.1)
+      htmlcompressor (~> 0.2.0)
+      middleman-core (>= 3.2)
     middleman-sprockets (4.1.0)
       middleman-core (~> 4.0)
       sprockets (>= 3.0)
@@ -107,6 +135,7 @@ GEM
     minitest (5.10.3)
     multi_json (1.12.1)
     mustermann (1.0.0)
+    oj (3.3.6)
     padrino-helpers (0.13.3.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.13.3.4)
@@ -116,6 +145,7 @@ GEM
     parallel (1.12.0)
     pony (1.11)
       mail (>= 2.0)
+    progress (3.3.1)
     public_suffix (2.0.5)
     rack (2.0.3)
     rack-livereload (0.3.16)
@@ -157,8 +187,11 @@ DEPENDENCIES
   middleman (~> 4.2)
   middleman-autoprefixer (~> 2.7)
   middleman-compass (>= 4.0.0)
+  middleman-imageoptim!
   middleman-livereload
+  middleman-minify-html
   middleman-sprockets (~> 4.0.x)
+  oj
   pony
   rack-test
   sendgrid-ruby
