@@ -167,7 +167,9 @@ src: url(fonts/BebasNeue.otf);
     #myprojects p{
       font-size: 10pt; }
     #projects-title{
-      font-size: 14pt;}}
+      font-size: 14pt;}
+      #myprojects {
+      padding: 2% 10% 0% 10%;}}
 
 *,
 *::before,
@@ -274,7 +276,9 @@ src: url(fonts/BebasNeue.otf);
       font-size: 14pt; }}
   @media (max-width: 992px) {
     #aboutme p{
-      font-size: 10pt; }}
+      font-size: 10pt; }
+      #aboutme {
+        padding: 2% 10% 0% 10%; }}
 
 #aboutme a {
   text-decoration: bold;

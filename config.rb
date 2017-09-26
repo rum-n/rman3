@@ -29,6 +29,7 @@ activate :sprockets
 activate :gzip
 activate :imageoptim
 activate :minify_html
+activate :asset_hash
 # proxy(
 #   '/this-page-has-no-template.html',
 #   '/template-file.html',
