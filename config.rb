@@ -37,7 +37,8 @@ activate :asset_hash
 #     which_fake_page: 'Rendering a fake page with a local variable'
 #   },
 # )
-
+config.serve_static_assets = true
+config.static_cache_control = "public, max-age=2419200"
 # Helpers
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/

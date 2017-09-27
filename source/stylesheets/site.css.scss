@@ -376,10 +376,17 @@ src: url(fonts/BebasNeue.otf);
   font-size: 40pt;
 }
 
+  @media (max-width: 992px){
+    #contact-title{
+      font-size: 25pt;}}
+
 #contact-text {
   font-family: 'Courier New', sans-serif;
   font-size: 12pt;
 }
+    @media (max-width: 992px){
+    #contact-text{
+      font-size: 8pt;}}
 
 #contactForm { 
   border: 5px solid gold;
@@ -402,8 +409,8 @@ src: url(fonts/BebasNeue.otf);
       padding: 1em;}}
   @media (max-width: 992px){
     #contactForm{
-      width: 350px;
-      height: 500px;
+      width: 250px;
+      height: 480px;
       padding:1em;}}
 
 input, textarea { 
@@ -416,7 +423,16 @@ input, textarea {
   padding: .4em;
   border: 2px solid black;
 }
-textarea { height: 80px; resize: none; }
+
+  @media (max-width: 992px){
+    input, textarea {
+      width: 200px;}}
+
+textarea { 
+  height: 80px; 
+  resize: 
+  none; 
+}
 
 .formBtn { 
   width: 140px;
@@ -429,6 +445,11 @@ textarea { height: 80px; resize: none; }
   height: 40px;
   font-family:'Bebas Neue', sans-serif;
 }
+    
+  @media (max-width: 992px){
+    .formBtn {
+      width: 80px;
+      font-size: 1.2em;}}
 
 .formBtn:hover {
   color:gold;
