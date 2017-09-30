@@ -24,7 +24,7 @@ title: Ludogorets 2017
 
 <div class="race-listing">
     <div class="charts">
-        <div id="#"></div>
+        <div id="scatterplot-l2017-42male"></div>
     </div>
     <div class="charts">
         <div id="#"></div>
@@ -34,3 +34,108 @@ title: Ludogorets 2017
     </div>
 </div>
 </html>
+
+<pre id="csv-l2017-42male" style="display: none">Name,Age,Time
+Milen Todorov Tonchev,39,14625000
+Velizar Plamenov Tashev,29,15844000
+Daniel Ivanov,27,15844000
+Nikola Nikolaev Markov,28,16070000
+Petar Rosenov Petrov,32,16150000
+Nikolay Kyuchukov,35,16611000
+Martin Naskov Mitin,31,17423000
+Borislav Dilov Lakov,52,17548000
+Koloyan Kamenov Petkov,36,17564000
+Hristo Georgiev Goshev,55,18164000
+Asparuh Valchev,35,18261000
+Andrei Nakov,39,18735000
+Milen Ivanov Kalchev,44,18812000
+Dimitar Todorov Tonchev,44,18856000
+Kostadin Atanasov Novakov,44,18916000
+Pavel Plamenov Petrov,20,19148000
+Ivelin Zhechev Krastev,39,19181000
+Kenan Ibrahim Sally,37,19448000
+Dimitar Ivanov Bontchev,48,19480000
+Plamen Zlatkov Valchev,51,19481000
+Radoslav Atanasov Radev,38,19838000
+Valentin Kostadinov Velikov,42,22821000
+Ilian Venelinov Tsachev,43,23279000
+Ivailo Stefkov Stefanov,18,23421000
+</pre>
+
+<script>
+Highcharts.setOptions(Highcharts.theme);
+Highcharts.chart('scatterplot-l2017-42male', {
+    credits: {
+        enabled: false
+    },
+
+    chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Male Runners in the 2017 Ludogorets Marathon'
+    },
+    xAxis: {
+        title: {
+            enabled: true,
+            text: 'Age'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'Time'
+        },
+        type: 'datetime',
+        // dateTimeLabelFormats: {
+        //     second: "%H:%M:%S",
+        //     minute: "%H:%M:%S",
+        //     hour: "%H:%M:%S"
+        // },
+        reversed: true
+    },
+
+    legend:false,
+
+    plotOptions: {
+        scatter: {
+            marker: {
+                fillColor: 'orange',
+                fillOpacity: 0.3,
+                radius: 6,
+                states: {
+                    hover: {
+                        enabled: true,
+                        lineColor: 'rgb(100,100,100,)'
+                    }
+                }
+            },
+            states: {
+                hover: {
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<b>{point.key}</b><br>',
+                pointFormat: '{point.x} years old, <br> {point.y:%H:%M:%S}'
+            }
+        }
+    },
+
+    data: {
+        FirstRowAsNames:false,
+        csv: document.getElementById('csv-l2017-42male').innerHTML,
+        seriesMapping: [{
+            name: 0,
+            x: 1,
+            y: 2
+        }]
+    },
+});
+</script>
+
