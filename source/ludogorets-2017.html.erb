@@ -7,7 +7,7 @@ title: Ludogorets 2017
 <div class="main-projects">
 
     <h1 class="header">Ludogorets 2017</h1>
-    <p>Charts coming soon...</p>
+    <p>In the end of July 2017 I participated in the Ludogorets mountain half-marathon. It was a serene forest track with a moderate elevation. What made this a really fun race was mainly the big group of friends we managed to gather to participate together. </p><p>The track itself was also close to the seaside so, naturally, after the race we went camping on the shore for a couple of days.</p>
 
 
     <p><a href="/results" class="hvr-underline-from-center" id="backbutton">BACK TO RACE RESULTS</a></p>
@@ -27,10 +27,16 @@ title: Ludogorets 2017
         <div id="scatterplot-l2017-42male"></div>
     </div>
     <div class="charts">
-        <div id="#"></div>
+        <div id="scatterplot-l2017-42female"></div>
      </div>
      <div class="charts">
-        <div id="#"></div>
+        <div id="scatterplot-l2017-21male"></div>
+    </div>
+    <div class="charts">
+        <div id="scatterplot-l2017-21female"></div>
+    </div>
+    <div class="charts">
+        <div id="l2017-gender"></div>
     </div>
 </div>
 </html>
@@ -139,3 +145,368 @@ Highcharts.chart('scatterplot-l2017-42male', {
 });
 </script>
 
+<pre id="csv-l2017-42female" style="display: none">Name,Age,Time
+Gergana Yanakieva Malcheva,41,18259000.00
+Evelina Boikova Zlatanova-kazakova,30,18698000.00
+Magdalena Petrova Yordanova,36,19699000.00
+Zdravka Yankova Bozhilova,29,20325000.00
+Demyana Dimitrova Yosifova,18,20505000.00
+Nadejda Asenova Stanilova,36,21488000.00
+Aneta Dimitrova Velikova,43,22821000.00
+</pre>
+
+<script>
+Highcharts.setOptions(Highcharts.theme);
+Highcharts.chart('scatterplot-l2017-42female', {
+    credits: {
+        enabled: false
+    },
+
+    chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Female Runners in the 2017 Ludogorets Marathon'
+    },
+    xAxis: {
+        title: {
+            enabled: true,
+            text: 'Age'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'Time'
+        },
+        type: 'datetime',
+        // dateTimeLabelFormats: {
+        //     second: "%H:%M:%S",
+        //     minute: "%H:%M:%S",
+        //     hour: "%H:%M:%S"
+        // },
+        reversed: true
+    },
+
+    legend:false,
+
+    plotOptions: {
+        scatter: {
+            marker: {
+                fillColor: 'red',
+                fillOpacity: 0.3,
+                radius: 6,
+                states: {
+                    hover: {
+                        enabled: true,
+                        lineColor: 'rgb(100,100,100,)'
+                    }
+                }
+            },
+            states: {
+                hover: {
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<b>{point.key}</b><br>',
+                pointFormat: '{point.x} years old, <br> {point.y:%H:%M:%S}'
+            }
+        }
+    },
+
+    data: {
+        FirstRowAsNames:false,
+        csv: document.getElementById('csv-l2017-42female').innerHTML,
+        seriesMapping: [{
+            name: 0,
+            x: 1,
+            y: 2
+        }]
+    },
+});
+</script>
+
+<pre id="csv-l2017-21male" style="display: none">Name,Age,Time
+Yordan Andreev Petrov,27,5639000.00
+Daniel Kubashliev,28,6455000.00
+Ivaylo Krasimirov Valev,28,6707000.00
+Ventsi Mladenov,32,6814000.00
+Petar Slavchev Tzonkov,35,6855000.00
+Velizar Yordanov Kanarini,31,6956000.00
+Peicho Casserov,32,7045000.00
+Nikolay Nikolaev Demerdjiev,16,7160000.00
+Stefan Zhilanov Stanchev,29,7198000.00
+Milen Veskov Hristov,37,7237000.00
+Ivan Assenov Manchev,28,7318000.00
+Rumen Rumenov Manev,28,7323000.00
+Ivan Kavarkov,34,7323000.00
+Emil Evtimov,27,7390000.00
+Atanas Yanchev Kimov,40,7445000.00
+Veselin Dimitrov Vasilev,42,7587000.00
+Georgi Todorov Petrov,29,7738000.00
+Dimo Evgeniyev Dimov,33,7837000.00
+Dimitar Todorov Dimitrov,49,7925000.00
+Denislav Petkov Hadjiminev,24,8045000.00
+Stan Julian Kalov,25,8065000.00
+Peter Hristov Svetiev,35,8113000.00
+Svetoslav Hristov Svetiev,36,8139000.00
+Plamen Vanev Slavov,33,8320000.00
+Ivo Roussev Russev,32,8329000.00
+Alexander Dimitrov Ivanov,44,8666000.00
+Rostislav Jivkov Zlatev,38,8772000.00
+Georgi Yordanov Georgiev,28,8816000.00
+Srebrin Tonev Bushev,28,8874000.00
+Todor Volodiev Hristov,30,9068000.00
+Dimitar Dimitrov Yordanov,36,9263000.00
+Dragomir Stankov Dimitrov,42,9448000.00
+Daniel Medarov Medarov,30,9481000.00
+Martin Borislavov Gradev,33,9515000.00
+Nikolay Stefanov Tomov,24,9533000.00
+Allan Kay,69,9598000.00
+Nikolay Todorov Halachev,33,9663000.00
+Kaloyan Krasimirov Nikolov,10,9685000.00
+Krasimir Todorov Nikolov,42,9692000.00
+Zhivko Ivanov Duchev,42,9769000.00
+Theodor Stoyanov Stoynov,22,9915000.00
+Karen Agog Hazarjan,36,9938000.00
+Yordan Miankov Tsingov,50,10289000.00
+Ivan Andreev Ivanov,50,10543000.00
+Yordan Valentinov Angelov,27,10602000.00
+Vladislav Rosenov Dimitrov,31,10907000.00
+Åke Torleif Dahllöf,46,11025000.00
+Vladislav Tsvetanov Zhivkov,31,11467000.00
+Damian Borislavov Nikolov,30,11559000.00
+Svilen Radkov Radev,34,13225000.00
+Boril Plamenov Petrov,28,14345000.00
+</pre>
+
+<script>
+Highcharts.setOptions(Highcharts.theme);
+Highcharts.chart('scatterplot-l2017-21male', {
+    credits: {
+        enabled: false
+    },
+
+    chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Male Runners in the 2017 Ludogorets Half-Marathon'
+    },
+    xAxis: {
+        title: {
+            enabled: true,
+            text: 'Age'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'Time'
+        },
+        type: 'datetime',
+        // dateTimeLabelFormats: {
+        //     second: "%H:%M:%S",
+        //     minute: "%H:%M:%S",
+        //     hour: "%H:%M:%S"
+        // },
+        reversed: true
+    },
+
+    legend:false,
+
+    plotOptions: {
+        scatter: {
+            marker: {
+                fillColor: 'blue',
+                fillOpacity: 0.3,
+                radius: 6,
+                states: {
+                    hover: {
+                        enabled: true,
+                        lineColor: 'rgb(100,100,100,)'
+                    }
+                }
+            },
+            states: {
+                hover: {
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<b>{point.key}</b><br>',
+                pointFormat: '{point.x} years old, <br> {point.y:%H:%M:%S}'
+            }
+        }
+    },
+
+    data: {
+        FirstRowAsNames:false,
+        csv: document.getElementById('csv-l2017-21male').innerHTML,
+        seriesMapping: [{
+            name: 0,
+            x: 1,
+            y: 2
+        }]
+    },
+});
+</script>
+
+<pre id="csv-l2017-21female" style="display: none">Name,Age,Time
+Tanya Dimitrova Dimitrova,36,6597000.00
+Tsvetelina Anastasova Venkova,35,7165000.00
+Yana Plamenova Kazakova,30,7943000.00
+Katya Pavlinova Djenkova,38,7979000.00
+Neda Plamen Valcheva,15,8323000.00
+Detelina Vladimirova Radoslavova,23,8557000.00
+Aleksandra Petrova Ivanova,33,8591000.00
+Krasimira Krasimirova Petrushkova,39,9071000.00
+Albena Nedelcheva Tsoneva,44,9071000.00
+Vesela Valentinova Kucheva,27,9188000.00
+Annie Stancheva Gerasimova,31,9437000.00
+Emma Josefin Holmbro,40,9532000.00
+Radina Diyanova Staneva,27,9536000.00
+Desislava Stilianova Gabrovska,40,9560000.00
+Svetlana Stancheva Kirova,38,9640000.00
+Maria Rumenova Stefanova,39,9774000.00
+Christina Eddie Chakarova,35,9937000.00
+Iglika Dimitrova Oyanova,29,10056000.00
+Tatyana Todorova Georgieva,40,10401000.00
+Sofia Petrova Petrova,16,11282000.00
+Boryana Yordanova Yordanova,34,11301000.00
+Assia Stanka Bontcheva,49,12312000.00
+</pre>
+
+<script>
+Highcharts.setOptions(Highcharts.theme);
+Highcharts.chart('scatterplot-l2017-21female', {
+    credits: {
+        enabled: false
+    },
+
+    chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Female Runners in the 2017 Ludogorets Half-Marathon'
+    },
+    xAxis: {
+        title: {
+            enabled: true,
+            text: 'Age'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'Time'
+        },
+        type: 'datetime',
+        // dateTimeLabelFormats: {
+        //     second: "%H:%M:%S",
+        //     minute: "%H:%M:%S",
+        //     hour: "%H:%M:%S"
+        // },
+        reversed: true
+    },
+
+    legend:false,
+
+    plotOptions: {
+        scatter: {
+            marker: {
+                fillColor: 'Green',
+                fillOpacity: 0.3,
+                radius: 6,
+                states: {
+                    hover: {
+                        enabled: true,
+                        lineColor: 'rgb(100,100,100,)'
+                    }
+                }
+            },
+            states: {
+                hover: {
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<b>{point.key}</b><br>',
+                pointFormat: '{point.x} years old, <br> {point.y:%H:%M:%S}'
+            }
+        }
+    },
+
+    data: {
+        FirstRowAsNames:false,
+        csv: document.getElementById('csv-l2017-21female').innerHTML,
+        seriesMapping: [{
+            name: 0,
+            x: 1,
+            y: 2
+        }]
+    },
+});
+</script>
+
+<script>
+Highcharts.chart('l2017-gender', {
+    credits: {
+        enabled: false
+    },
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Number of Female vs. Male runners'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Gender',
+        colorByPoint: true,
+        data: [{
+            name: 'Female',
+            y: 26.73,
+        }, {
+            name: 'Male',
+            y: 73.27,
+        }, {
+    }]
+}]
+});
+
+</script>
