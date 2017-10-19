@@ -8,7 +8,7 @@ title: Spokes and Spikes 2017
 
 	<h1 class="header">Spokes and Spikes 2017</h1>
 
-        <p>Spokes and Spikes is a small, but very fun race. It's a relay run in teams of two. There's also a cycling race, but I've focused the visualization only on the running part, since it's the one I participated in.</p><p>My friends and I decided to make 3 teams and compete against each other. The race was tough, but my team won with a difference of 4 sec. We're still waiting for our prize from the bet - a case full of beers.</p><p>Charts coming soon...</p>
+        <p>Spokes and Spikes is a small, but very fun race. It's a relay run in teams of two. There's also a cycling race, but I've focused the visualization only on the running part, since it's the one I participated in.</p><p>My friends and I decided to make 3 teams and compete against each other. The race was tough, but my team won with a difference of 4 sec. We're still waiting for our prize from the bet - a case full of beers.</p>
 
     <p><a href="/results" class="hvr-underline-from-center" id="backbutton">BACK TO RACE RESULTS</a></p>
     <p><a href="/index.html" class="hvr-underline-from-center" id="backbutton">BACK TO MAIN PAGE</a></p>
@@ -24,28 +24,30 @@ title: Spokes and Spikes 2017
 </div>
 
 <div class="race-listing">
+    <div class="charts">
+        <div id="scatterplot-ss2017"></div>
+    </div>
 </div>
 
 </html>
 
-<pre id="csv-ss2017-40plus" style="display: none">Name,Age,Time
-Kalin Rusev,44,365025.83
-Nikolaj Kostadinov,42,370483.5
-Lyudmil Lozov,42,390437.92
-Jeko Stojchev,,390554.13
-Boris Kasherov,44,436861.21
-Georgi Georgiev,40,442235.67
-Andrej Rublyov,39,465889.04
-Teodor Milkov,40,473804.79
-Nikolaj Djankov,49,492552.58
-Gero Saturov,40,501103.92
-Nigel Morgan,61,523462.5
-Georgi Kozhuharov,41,562595.83
-Konstantin Ivanov,44,595496.25
-Cvetan Banev,40,778547.92</pre>
+<pre id="csv-ss2017-40plus" style="display: none">Name, Place, Time
+Kolyo Raychinov & Rosen Rusev, 1, 10083125.04
+Rumen Manev & Ivan Manchev, 2, 12064896.96
+Nikola Markov & Emil Evtimov, 3, 12068147.04
+Kostadin Novakov & Angel Gavrilov, 4, 12352114.08
+Venzislav Jordanov & Evgeni Jordanov, 5, 12457852.08
+Miroslav Djankov & Plamen Slavov, 6, 13015288.08
+Vladimir Vassilev & Momchil Momchilov, 7, 13763718.96
+Ivan Rachev & Vladimir Kovachev, 8, 14368379.04
+Hristina Tsenova & Krasimir Pamporov,9, 14694341.04
+Mina Serdarova & Nikolay Uzunov,10, 15716970
+Vanina Milusheva & Iva Arnaudova,11, 16099314.96
+Veselin Hadjitodorov & Lilit Panayotova,12, 16605114.96
+Angel Grozev & Samuil Velinov,13, 18954780</pre>
 
 <script>
-Highcharts.chart('scatterplot-ss2017-40plus', {
+Highcharts.chart('scatterplot-ss2017', {
     credits: {
         enabled: false
     },
@@ -55,12 +57,12 @@ Highcharts.chart('scatterplot-ss2017-40plus', {
         zoomType: 'xy'
     },
     title: {
-        text: '40+ Male Runners in Spokes and Spikes 2017'
+        text: 'Relay Runners in Spokes and Spikes 2017'
     },
     xAxis: {
         title: {
             enabled: true,
-            text: 'Age'
+            text: 'Place'
         },
         startOnTick: true,
         endOnTick: true,
@@ -84,7 +86,7 @@ Highcharts.chart('scatterplot-ss2017-40plus', {
     plotOptions: {
         scatter: {
             marker: {
-                fillColor: 'orange',
+                fillColor: 'pink',
                 fillOpacity: 0.3,
                 radius: 6,
                 states: {
@@ -103,7 +105,7 @@ Highcharts.chart('scatterplot-ss2017-40plus', {
             },
             tooltip: {
                 headerFormat: '<b>{point.key}</b><br>',
-                pointFormat: '{point.x} years old, <br> {point.y:%H:%M:%S}'
+                pointFormat: 'Place: {point.x}, <br> {point.y:%H:%M:%S}'
             }
         }
     },
