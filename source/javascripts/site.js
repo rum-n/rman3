@@ -1,11 +1,3 @@
-
-
-/*!
- * Materialize v0.100.1 (http://materializecss.com)
- * Copyright 2014-2017 Materialize
- * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
- */
-
 //////////////// ADDED BY ME
 
 // FADE IN ON LOAD PAGE
@@ -56,24 +48,42 @@ $(function() {
 
 // PROJECTS PAGE
 
-$(function() {
+    $(document).ready(function() {
+      $('#fullpage').fullpage({});
+    });
+
+    $('a').click(function() {
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+      }, 1000);
+      return false;
+    });
+
+// $(function() {
   
-  // contact form animations
-  $('#projects').click(function() {
-    $('#myprojects').fadeToggle();
-  })
+//   $('#projects').click(function() {
+//     $('#myprojects').fadeToggle();
+//   })
 
-  $('.BackToClose-proj').click(function() {
-    var container = $("#myprojects");
+//   $('.BackToClose-proj').click(function() {
+//     var container = $("#myprojects");
 
-    { 
-      container.fadeOut();
-    }
+//     { 
+//       container.fadeOut();
+//     }
 
-  })
+//   })
   
-});
+// });
 
+  var controller = new ScrollMagic.Controller();
+
+  // build scene
+  var scene = new ScrollMagic.Scene({triggerElement: "#trigger"})
+          // trigger a velocity opaticy animation
+          .setVelocity("#animate", {opacity: 0}, {duration: 400})
+          .addIndicators() // add indicators (requires plugin)
+          .addTo(controller);
 
 // GOOGLE ANALYTICS
 
