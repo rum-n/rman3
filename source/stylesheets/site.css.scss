@@ -125,37 +125,16 @@ src: url(fonts/BebasNeue.otf);
     transition: opacity 0.6s ease-out;
  }
 
-/*PROJECTS POP UP*/
+/*PROJECTS PAGE*/
 
-/*#projects-title {
+#projects-title {
   font-family: 'Helvetica', sans-serif;
-  font-size: 25pt;
-  color: gold;
-}
-
-#projects-title:hover {
-  opacity: 0.7;
-}
-
-#myprojects {
-  border: 2px solid gold;
-  display: none;
-  width: 100%;
-  height: 100%;
-  padding: 2% 20% 0% 20%;
-  text-align: left;
-  background: #333333;
-  position: fixed;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%)
+  font-size: 22pt;
+  color: #fff;
 }
 
 #myprojects p {
-  color: #fff;
-  font-size: 14pt;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Courier New', sans-serif;
 }
 
   @media (max-width: 1200px) {
@@ -171,81 +150,9 @@ src: url(fonts/BebasNeue.otf);
       #myprojects {
       padding: 2% 10% 0% 10%;}}
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}*/
-
-.BackToClose-proj {
-  position: absolute;
-  width: 46px;
-  height: 6px;
-  margin: 32px 12px;
-  right: 4%;
-  top: 4%;
-  border-radius: 4px;
-  background: gold;
-  animation: element 1s ease infinite alternate;
-  
-  &::before,
-  &::after {
-    display: block;
-    position: absolute;
-    width: 28px;
-    height: 6px;
-    border-radius: 4px;
-    background: gold;
-    content: "";
-  }
-  
-  &::before {
-    top: -14px;
-    animation: before 1s ease infinite alternate;
-  }
-  
-  &::after {
-    bottom: -14px;
-    animation: after 1s ease infinite alternate;
-  }
-}
-
-.BackToClose-proj:hover {
-  opacity: 0.6;
-}
-
-@keyframes element {
-  0%, 30% {
-    transform: rotate(0deg);
-  }
-  
-  70%, 100% {
-    transform: rotate(-45deg);
-  }
-}
-
-@keyframes before {
-  0%, 30% {
-    width: 28px;
-    transform: rotate(-45deg) translateY(2px) translateX(-6px);
-  }
-  
-  70%, 100% {
-    width: 23px;
-    transform: rotate(-90deg) translateY(11px) translateX(-2px);
-  }
-}
-
-@keyframes after {
-  0%, 30% {
-    width: 28px;
-    transform: rotate(45deg) translateY(-2px) translateX(-6px);
-  }
-  
-  70%, 100% {
-    width: 23px;
-    transform: rotate(90deg) translateY(-11px) translateX(-2px);
-  }
+#seemore {
+  font-family: 'Courier New', sans-serif;
+  display: inline-block;
 }
 
 /*ABOUT POP UP*/
@@ -622,19 +529,19 @@ hr {
   text-transform: uppercase;
 }
 
-.main {
+#main {
   width: 45%;
   padding-top: 7%;
   padding-bottom: 4%;
   padding-left: 7%;
-  position: absolute;
+  position: fixed;
 }
 
   @media (max-width: 1200px) {
-    .main{
+    #main{
       width: 90%}}
   @media (max-width: 992px){
-    .main{
+    #main{
       width: 90%}}
 
 a {
@@ -758,167 +665,3 @@ span.stretch {
   font-size: 40pt;
   color: #000;
  }
-
-/*PROJECTS TRANSITIONS*/
-
-.fa-chevron-down {
-  color: white;
-  bottom: 0;
-  left: 50%;
-  position: absolute;
-  padding-bottom: 50px;
-  font-size: 40px;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-}
-
-.fa-chevron-up {
-  color: white;
-  bottom: 0;
-  left: 50%;
-  position: absolute;
-  padding-bottom: 50px;
-  font-size: 40px;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-}
-
-.one {
-  background: url('../images/me-projects.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.two {
-  background: url('../images/me-runviz.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.three {
-  background: url('../images/project-nordkins.png');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.four {
-  background: url('../images/so-vintage.png');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; 
-}
-
-/*#so-vintage {
-  width: 250px;
-  padding-right: 7%;
-  padding-bottom: 20%;
-  float: right;
-  position: absolute;
-}*/
-
-.five {
-  background: url('../images/painting.jpeg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.six {
-  background: url('../images/ah.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.seven {
-  background: url('../images/me.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.project-info {
-  width: 55%;
-  padding-left: 50px;
-}
-
-.BackToClose-proj2 {
-  position: absolute;
-  width: 46px;
-  height: 6px;
-  margin: 32px 12px;
-  right: 4%;
-  top: 4%;
-  border-radius: 4px;
-  background: #fff;
-  animation: element 1s ease infinite alternate;
-  
-  &::before,
-  &::after {
-    display: block;
-    position: absolute;
-    width: 28px;
-    height: 6px;
-    border-radius: 4px;
-    background: #fff;
-    content: "";
-  }
-  
-  &::before {
-    top: -14px;
-    animation: before 1s ease infinite alternate;
-  }
-  
-  &::after {
-    bottom: -14px;
-    animation: after 1s ease infinite alternate;
-  }
-}
-
-.BackToClose-proj2:hover {
-  opacity: 0.6;
-}
-
-@keyframes element {
-  0%, 30% {
-    transform: rotate(0deg);
-  }
-  
-  70%, 100% {
-    transform: rotate(-45deg);
-  }
-}
-
-@keyframes before {
-  0%, 30% {
-    width: 28px;
-    transform: rotate(-45deg) translateY(2px) translateX(-6px);
-  }
-  
-  70%, 100% {
-    width: 23px;
-    transform: rotate(-90deg) translateY(11px) translateX(-2px);
-  }
-}
-
-@keyframes after {
-  0%, 30% {
-    width: 28px;
-    transform: rotate(45deg) translateY(-2px) translateX(-6px);
-  }
-  
-  70%, 100% {
-    width: 23px;
-    transform: rotate(90deg) translateY(-11px) translateX(-2px);
-  }
-}
