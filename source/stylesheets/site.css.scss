@@ -127,32 +127,138 @@ src: url(fonts/BebasNeue.otf);
 
 /*PROJECTS PAGE*/
 
-#projects-title {
-  font-family: 'Helvetica', sans-serif;
-  font-size: 22pt;
-  color: #fff;
+#myprojects {
+  border: 2px solid black;
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 2% 20% 0% 20%;
+  text-align: left;
+  /*background: #000;*/
+
+  background: url('../images/me-proj.jpg') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
 }
 
 #myprojects p {
-  font-family: 'Courier New', sans-serif;
+  color: #fff;
+  font-size: 16pt;
+  font-family: 'Helvetica', sans-serif;
 }
 
   @media (max-width: 1200px) {
     #myprojects p{
-      font-size: 12pt; }
-    #projects-title{
-      font-size: 18pt;}}
+      font-size: 14pt; }}
   @media (max-width: 992px) {
     #myprojects p{
       font-size: 10pt; }
-    #projects-title{
-      font-size: 14pt;}
       #myprojects {
-      padding: 2% 10% 0% 10%;}}
+        padding: 2% 10% 0% 10%; }}
+
+#myprojects a {
+  text-decoration: bold;
+  color: #fff;
+}
+
+#myprojects a:hover {
+  color: gold;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#projects-title {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 24pt;
+  color: #fff;
+}
 
 #seemore {
   font-family: 'Courier New', sans-serif;
   display: inline-block;
+}
+
+.BackToClose-proj {
+  position: absolute;
+  width: 46px;
+  height: 6px;
+  margin: 32px 12px;
+  right: 4%;
+  top: 4%;
+  border-radius: 4px;
+  background: #fff;
+  animation: element 1s ease infinite alternate;
+  
+  &::before,
+  &::after {
+    display: block;
+    position: absolute;
+    width: 28px;
+    height: 6px;
+    border-radius: 4px;
+    background: #fff;
+    content: "";
+  }
+  
+  &::before {
+    top: -14px;
+    animation: before 1s ease infinite alternate;
+  }
+  
+  &::after {
+    bottom: -14px;
+    animation: after 1s ease infinite alternate;
+  }
+}
+
+.BackToClose-proj:hover {
+  opacity: 0.6;
+}
+
+@keyframes element {
+  0%, 30% {
+    transform: rotate(0deg);
+  }
+  
+  70%, 100% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes before {
+  0%, 30% {
+    width: 28px;
+    transform: rotate(-45deg) translateY(2px) translateX(-6px);
+  }
+  
+  70%, 100% {
+    width: 23px;
+    transform: rotate(-90deg) translateY(11px) translateX(-2px);
+  }
+}
+
+@keyframes after {
+  0%, 30% {
+    width: 28px;
+    transform: rotate(45deg) translateY(-2px) translateX(-6px);
+  }
+  
+  70%, 100% {
+    width: 23px;
+    transform: rotate(90deg) translateY(-11px) translateX(-2px);
+  }
 }
 
 /*ABOUT POP UP*/
@@ -362,9 +468,6 @@ textarea {
   color:gold;
 }
 
-
-/*TRANSITIONS ON INTERNAL PAGES*/
-
 /*HOVER BUTTON*/
 
 $thick : 3px;
@@ -534,7 +637,7 @@ hr {
   padding-top: 7%;
   padding-bottom: 4%;
   padding-left: 7%;
-  position: fixed;
+  position: relative;
 }
 
   @media (max-width: 1200px) {

@@ -45,42 +45,29 @@ $(function() {
 
 // PROJECTS PAGE
 
-$(function() {
-  $('#projects').click(function() {
-
-      $('#main').load('/projects');
-  });
-});
-
-    // $(document).ready(function() {
-    //   $('#fullpage').fullpage({});
-    // });
-
-    // $('a').click(function() {
-    //   $('html, body').animate({
-    //     scrollTop: $($.attr(this, 'href')).offset().top
-    //   }, 1000);
-    //   return false;
-    // });
+// DYNAMIC PAGE LOAD
 
 // $(function() {
-  
 //   $('#projects').click(function() {
-//     $('#myprojects').fadeToggle();
-//   })
 
-//   $('.BackToClose-proj').click(function() {
-//     var container = $("#myprojects");
-
-//     { 
-//       container.fadeOut();
-//     }
-
-//   })
-  
+//       $('#main').load('/projects');
+//   });
 // });
 
 
+$(function() {
+  
+  $('#projects').click(function() {
+    $('#myprojects').fadeToggle();
+  })
 
+  $('.BackToClose-proj').click(function() {
+    var container = $("#myprojects");
+
+    { 
+      container.fadeOut();
+    }
+  })
+});
 
   
