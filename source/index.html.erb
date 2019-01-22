@@ -1,107 +1,44 @@
 ---
-title: Rumen Manev // Business, Outdoors & Tech
+title: Race Results Visualisation - Rumen Manev
 ---
 
-<div id="main">   
-  <div class="title-name">Rumen Manev</div>
+ 
+  <div class="title-name">Race Results Visualisation</div>
 
-    <hr>
+<html class="results">
+  <div id="results-homepage">
+      <div class="main-projects">
+        <h1 class="header">Race Results</h1>
+          <p>Since a few years, I've been fascinated with the world of data science and data visualization. Thinking of projects to practice on, I decided to combine it with another passion of mine - running.</p><p>On the right is a list of running events. I've participated in some them, but mostly I'd like to visualise the results in a simple way.</p><p>I hope the charts are interesting and useful for others as well. Feel free to <a href="https://www.rmanev.com">contact me</a> if you have any input or suggestions.</p>
+      </div>
 
-    <p>Business development | Project management </br> Amateur Web Development | Data Science </br> Running | Climbing | Cycling | Nature</p> <p>This website is where I put most of the things I feel are important. I try to update it regularly so keep an eye.</p>
+        <div class="race-listing">
 
-  <div class="menu">
-    <ul>
-      <li><a class="proj">
-
-        <span class="text" id='about'>About</span>
-        <span class="line -right"></span>
-        <span class="line -top"></span>
-        <span class="line -left"></span>
-        <span class="line -bottom"></span>
-
-      </a></li>
-      <li><a class="proj">
-
-        <span class="text" id='projects'>Projects</span>
-        <span class="line -right"></span>
-        <span class="line -top"></span>
-        <span class="line -left"></span>
-        <span class="line -bottom"></span>
-
-      </a></li>
-      <li><a class="proj">
-
-        <span class="text" id="contact">Contact</span>
-        <span class="line -right"></span>
-        <span class="line -top"></span>
-        <span class="line -left"></span>
-        <span class="line -bottom"></span>
-
-      </a></li>
-    </ul>
-  </div>
-
-  <!-- ABOUT ME -->
-
-  <div id="aboutme">
-    <a href="#"><div class="BackToClose"></div></a>
-        <h1 id="contact-title">About me</h1>
-        <p>Most of the time I'm working as a business developer for <a href="http://www.melewi.net" class="hvr-underline-from-center" target="blank" style="font-weight:600">Melewi</a> - a travelling UX & UI design studio.<p>The rest of time I'm either running, climbing, swimming or working on a new side project. I might also be up in the mountains or down by the sea, depending on the season. The point is I'm trying to keep myself active. <p>In the past few years, I've been semi-actively getting into web technologies, both in my daily work and as a hobby. More recently, I became interested in the field of Data Science, <%= link_to '<span class="hvr-underline-from-center" style="font-weight:600">experimenting</span>', '/results.html' %> with various tools and frameworks.</p> <p>If you see something interesting or just want to say hi, feel free to drop me a line.</p><p>In the meantime - here's a <a href="https://open.spotify.com/user/room_n/playlist/5bpb7U0wi2OCYkVVl5xY8G?si=u3qK0TOHQ525aOxZffCuOw" class="hvr-underline-from-center" target="blank" style="font-weight:600">playlist</a> you might find useful to listen to while you work.</p>
-  </div>
-
-  <!-- CONTACT -->
-
-  <div id="contactForm">
-    <h1 id="contact-title">Yes?</h1>
-    <small id="contact-text">Let me know what's on your mind and I'll get back to you as soon as I can.</small>
-
-    <form method="POST" action="http://formspree.io/manev.ru@gmail.com">
-      <input placeholder="Name" name = "name" type="text" required />
-      <input placeholder="Email" name = "e-mail" type="email" required />
-      <input placeholder="Subject" name = "subject" type="text" required />
-      <textarea placeholder="Write something..." name = "message"></textarea>
-      <input class="formBtn" type="submit" />
-    </form>
-  </div>
-
-
-<!-- PROJECTS -->
-
-  <div id="myprojects"> 
-    <a href="#"><div class="BackToClose-proj"></div></a>
-        <h1 id="projects-title">Race Results Visualization</h1>
-        <p>Interactive data visualizations of results from running events.</p>
-        <span id="seemore"><%= link_to 'SEE MORE', '/results.html' %></span>
-
-        <h1 id="projects-title">Nordkins</h1>
-        <p class="light">A street apparel brand highlighting art and simplicity.</p>
-        <span id="seemore"><a href="http://www.nordkins.com">SEE MORE</a></span>
-
-        <h1 id="projects-title">NRAV wear</h1>
-        <p class="light">High-performance active wear inspired by the need to move.</p>
-        <span id="seemore"><a href="http://www.nravwear.com">SEE MORE</a></span>
-        
-        <h1 id="projects-title">Gripindoor</h1>
-        <p>A guide for indoor climbing across world.</p>
-        <span id="seemore"><a href="http://www.gripindoor.com">SEE MORE</a></span>
-        
-        <a><h1 id="projects-title">This website</h1></a>
-        <p>Duh.</p>
-  </div>
-
-
-
-  <!-- SOCIAL MEDIA -->
-
-  <div>
-    <div class="social"><a href="https://www.linkedin.com/in/rmanev/" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a></div>
-    <div class="social"><a href="https://www.xing.com/profile/Rumen_Manev?sc_o=mxb_p" target="_blank"><i class="fa fa-xing fa-2x"></i></a></div>
-    <div class="social"><a href="https://medium.com/@room_n" target="_blank"><i class="fa fa-medium fa-2x"></i></a></div>
-    <div class="social"><a href="https://twitter.com/room_n" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></div>
-    <div class="social"><a href="https://github.com/rum-n" target="_blank"><i class="fa fa-github fa-2x"></i></a></div>
-    <div class="social"><a href="https://angel.co/rumen-manev" target="_blank"><i class="fa fa-angellist fa-2x"></i></a></div>
-    <div class="social"><a href="https://www.instagram.com/room_n" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></div>
-  </div>
-</div>
-
-
+            <div class="project">
+              <%= link_to '<img src="../images/ludogorets.jpg">
+                    <h1>Ludogorets 2017</h1>
+                  ', '/ludogorets-2017.html' %>
+            </div>
+          
+            <div class="project">
+              <%= link_to '<img src="../images/pirinSkyrun.png">
+                    <h1>Pirin Skyrun 2017</h1>
+                  ', '/pirin-skyrun2017.html' %>
+            </div>
+          
+            <div class="project">
+              <%= link_to '<img src="../images/spokes2017.png">
+                    <h1>Spokes & Spikes 2017</h1>
+                  ', '/spokesandspikes-2017.html' %>
+            </div>
+            
+            <div class="project">
+              <%= link_to '<img src="../images/sofiamarathonlogo.jpg">
+                    <h1>Sofia Marathon 2016</h1>
+                  ', '/sofiamarathon-2016.html' %>
+            </div>
+          
+        </div>
+      </div>
+  
+</html>
